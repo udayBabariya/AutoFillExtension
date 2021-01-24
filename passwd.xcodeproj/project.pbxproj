@@ -13,7 +13,38 @@
 		7858067925BD086A0097CD5E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7858067725BD086A0097CD5E /* Main.storyboard */; };
 		7858067B25BD086B0097CD5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7858067A25BD086B0097CD5E /* Assets.xcassets */; };
 		7858067E25BD086B0097CD5E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7858067C25BD086B0097CD5E /* LaunchScreen.storyboard */; };
+		7858068F25BD09150097CD5E /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7858068E25BD09150097CD5E /* AuthenticationServices.framework */; };
+		7858069225BD09150097CD5E /* CredentialProviderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7858069125BD09150097CD5E /* CredentialProviderViewController.swift */; };
+		7858069525BD09150097CD5E /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7858069325BD09150097CD5E /* MainInterface.storyboard */; };
+		7858069A25BD09150097CD5E /* extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 7858068C25BD09150097CD5E /* extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		785806A225BD09940097CD5E /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7858068E25BD09150097CD5E /* AuthenticationServices.framework */; };
+		785806B425BD14570097CD5E /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785806B325BD14570097CD5E /* TableViewCell.swift */; };
+		785806CF25BD155A0097CD5E /* Password.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785806CE25BD155A0097CD5E /* Password.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7858069825BD09150097CD5E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7858066625BD086A0097CD5E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7858068B25BD09150097CD5E;
+			remoteInfo = extension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7858069E25BD09150097CD5E /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				7858069A25BD09150097CD5E /* extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		7858066E25BD086A0097CD5E /* passwd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = passwd.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,6 +55,15 @@
 		7858067A25BD086B0097CD5E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7858067D25BD086B0097CD5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7858067F25BD086B0097CD5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7858068C25BD09150097CD5E /* extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = extension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		7858068E25BD09150097CD5E /* AuthenticationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AuthenticationServices.framework; path = System/Library/Frameworks/AuthenticationServices.framework; sourceTree = SDKROOT; };
+		7858069125BD09150097CD5E /* CredentialProviderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialProviderViewController.swift; sourceTree = "<group>"; };
+		7858069425BD09150097CD5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		7858069625BD09150097CD5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7858069725BD09150097CD5E /* extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = extension.entitlements; sourceTree = "<group>"; };
+		785806A125BD09940097CD5E /* passwd.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = passwd.entitlements; sourceTree = "<group>"; };
+		785806B325BD14570097CD5E /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		785806CE25BD155A0097CD5E /* Password.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Password.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +71,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				785806A225BD09940097CD5E /* AuthenticationServices.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7858068925BD09150097CD5E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7858068F25BD09150097CD5E /* AuthenticationServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,6 +90,8 @@
 			isa = PBXGroup;
 			children = (
 				7858067025BD086A0097CD5E /* passwd */,
+				7858069025BD09150097CD5E /* extension */,
+				7858068D25BD09150097CD5E /* Frameworks */,
 				7858066F25BD086A0097CD5E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				7858066E25BD086A0097CD5E /* passwd.app */,
+				7858068C25BD09150097CD5E /* extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -56,6 +108,7 @@
 		7858067025BD086A0097CD5E /* passwd */ = {
 			isa = PBXGroup;
 			children = (
+				785806A125BD09940097CD5E /* passwd.entitlements */,
 				7858067125BD086A0097CD5E /* AppDelegate.swift */,
 				7858067325BD086A0097CD5E /* SceneDelegate.swift */,
 				7858067525BD086A0097CD5E /* ViewController.swift */,
@@ -67,7 +120,54 @@
 			path = passwd;
 			sourceTree = "<group>";
 		};
+		7858068D25BD09150097CD5E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7858068E25BD09150097CD5E /* AuthenticationServices.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7858069025BD09150097CD5E /* extension */ = {
+			isa = PBXGroup;
+			children = (
+				785806C425BD153A0097CD5E /* Model */,
+				785806B725BD149F0097CD5E /* ViewController */,
+				7858069325BD09150097CD5E /* MainInterface.storyboard */,
+				7858069625BD09150097CD5E /* Info.plist */,
+				7858069725BD09150097CD5E /* extension.entitlements */,
+			);
+			path = extension;
+			sourceTree = "<group>";
+		};
+		785806B725BD149F0097CD5E /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7858069125BD09150097CD5E /* CredentialProviderViewController.swift */,
+				785806B325BD14570097CD5E /* TableViewCell.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		785806C425BD153A0097CD5E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				785806CE25BD155A0097CD5E /* Password.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		785806A525BD0B440097CD5E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		7858066D25BD086A0097CD5E /* passwd */ = {
@@ -77,15 +177,35 @@
 				7858066A25BD086A0097CD5E /* Sources */,
 				7858066B25BD086A0097CD5E /* Frameworks */,
 				7858066C25BD086A0097CD5E /* Resources */,
+				7858069E25BD09150097CD5E /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				7858069925BD09150097CD5E /* PBXTargetDependency */,
 			);
 			name = passwd;
 			productName = passwd;
 			productReference = 7858066E25BD086A0097CD5E /* passwd.app */;
 			productType = "com.apple.product-type.application";
+		};
+		7858068B25BD09150097CD5E /* extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7858069B25BD09150097CD5E /* Build configuration list for PBXNativeTarget "extension" */;
+			buildPhases = (
+				785806A525BD0B440097CD5E /* Headers */,
+				7858068825BD09150097CD5E /* Sources */,
+				7858068925BD09150097CD5E /* Frameworks */,
+				7858068A25BD09150097CD5E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = extension;
+			productName = extension;
+			productReference = 7858068C25BD09150097CD5E /* extension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -97,6 +217,9 @@
 				LastUpgradeCheck = 1230;
 				TargetAttributes = {
 					7858066D25BD086A0097CD5E = {
+						CreatedOnToolsVersion = 12.3;
+					};
+					7858068B25BD09150097CD5E = {
 						CreatedOnToolsVersion = 12.3;
 					};
 				};
@@ -115,6 +238,7 @@
 			projectRoot = "";
 			targets = (
 				7858066D25BD086A0097CD5E /* passwd */,
+				7858068B25BD09150097CD5E /* extension */,
 			);
 		};
 /* End PBXProject section */
@@ -127,6 +251,14 @@
 				7858067E25BD086B0097CD5E /* LaunchScreen.storyboard in Resources */,
 				7858067B25BD086B0097CD5E /* Assets.xcassets in Resources */,
 				7858067925BD086A0097CD5E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7858068A25BD09150097CD5E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7858069525BD09150097CD5E /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,7 +275,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7858068825BD09150097CD5E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				785806CF25BD155A0097CD5E /* Password.swift in Sources */,
+				7858069225BD09150097CD5E /* CredentialProviderViewController.swift in Sources */,
+				785806B425BD14570097CD5E /* TableViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7858069925BD09150097CD5E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7858068B25BD09150097CD5E /* extension */;
+			targetProxy = 7858069825BD09150097CD5E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		7858067725BD086A0097CD5E /* Main.storyboard */ = {
@@ -160,6 +310,14 @@
 				7858067D25BD086B0097CD5E /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		7858069325BD09150097CD5E /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7858069425BD09150097CD5E /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -284,11 +442,14 @@
 		7858068325BD086B0097CD5E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = passwd/passwd.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GU6TNC55T8;
 				INFOPLIST_FILE = passwd/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -303,17 +464,60 @@
 		7858068425BD086B0097CD5E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = passwd/passwd.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GU6TNC55T8;
 				INFOPLIST_FILE = passwd/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.uday.passwd;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		7858069C25BD09150097CD5E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = extension/extension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GU6TNC55T8;
+				INFOPLIST_FILE = extension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.uday.passwd.extension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7858069D25BD09150097CD5E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = extension/extension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GU6TNC55T8;
+				INFOPLIST_FILE = extension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.uday.passwd.extension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -336,6 +540,15 @@
 			buildConfigurations = (
 				7858068325BD086B0097CD5E /* Debug */,
 				7858068425BD086B0097CD5E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7858069B25BD09150097CD5E /* Build configuration list for PBXNativeTarget "extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7858069C25BD09150097CD5E /* Debug */,
+				7858069D25BD09150097CD5E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
