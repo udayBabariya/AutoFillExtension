@@ -11,8 +11,13 @@ class CredentialProviderViewController: ASCredentialProviderViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    var passwords = [Password]()
+    var passwords = [Credential]()
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        passwords = RealmAPI.shared.readAll()
+        tableView.reloadData()
+    }
 
     /*
      Prepare your UI to list available credentials for the user to choose from. The items in
@@ -20,11 +25,10 @@ class CredentialProviderViewController: ASCredentialProviderViewController {
      prioritize the most relevant credentials in the list.
     */
     override func prepareCredentialList(for serviceIdentifiers: [ASCredentialServiceIdentifier]) {
-       
+        passwords = RealmAPI.shared.readAll()
         tableView.delegate = self
         tableView.dataSource = self
-        passwords = [Password(userName: "Uday", password:"1234"),
-                     Password(userName: "Uday1", password:"12345")]
+    
     }
 
     /*
@@ -42,9 +46,10 @@ class CredentialProviderViewController: ASCredentialProviderViewController {
         if (databaseIsUnlocked) {
             let passwordCredential = ASPasswordCredential(user: "j_appleseed", password: "apple1234")
             self.extensionContext.completeRequest(withSelectedCredential: passwordCredential, completionHandler: nil)
-        } else {
-            self.extensionContext.cancelRequest(withError: NSError(domain: ASExtensionErrorDomain, code:ASExtensionError.userInteractionRequired.rawValue))
         }
+//        else {
+//            self.extensionContext.cancelRequest(withError: NSError(domain: ASExtensionErrorDomain, code:ASExtensionError.userInteractionRequired.rawValue))
+//        }
     }
     /*
      Implement this method if provideCredentialWithoutUserInteraction(for:) can fail with
@@ -61,11 +66,16 @@ class CredentialProviderViewController: ASCredentialProviderViewController {
         self.extensionContext.cancelRequest(withError: NSError(domain: ASExtensionErrorDomain, code: ASExtensionError.userCanceled.rawValue))
         print("c")
     }
+    
+    @IBAction func add(_ sender: Any){
+        guard let addCredVC = storyboard?.instantiateViewController(withIdentifier: "AddCredsViewController") as? AddCredsViewController else {return}
+        self.present(addCredVC, animated: true)
+    }
 
 }
 
 
-
+//MARK: UITableView datasource, delegate
 extension CredentialProviderViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return passwords.count
@@ -75,7 +85,7 @@ extension CredentialProviderViewController: UITableViewDelegate, UITableViewData
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath) as? TableViewCell else {return TableViewCell()}
         
         let cred = passwords[indexPath.row]
-        cell.textLabel?.text = cred.userName
+        cell.textLabel?.text = cred.username
         cell.detailTextLabel?.text = cred.password
         return cell
     }

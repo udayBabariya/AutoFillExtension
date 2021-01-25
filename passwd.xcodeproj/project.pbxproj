@@ -15,11 +15,17 @@
 		7858067E25BD086B0097CD5E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7858067C25BD086B0097CD5E /* LaunchScreen.storyboard */; };
 		7858068F25BD09150097CD5E /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7858068E25BD09150097CD5E /* AuthenticationServices.framework */; };
 		7858069225BD09150097CD5E /* CredentialProviderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7858069125BD09150097CD5E /* CredentialProviderViewController.swift */; };
-		7858069525BD09150097CD5E /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7858069325BD09150097CD5E /* MainInterface.storyboard */; };
 		7858069A25BD09150097CD5E /* extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 7858068C25BD09150097CD5E /* extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		785806A225BD09940097CD5E /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7858068E25BD09150097CD5E /* AuthenticationServices.framework */; };
 		785806B425BD14570097CD5E /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785806B325BD14570097CD5E /* TableViewCell.swift */; };
-		785806CF25BD155A0097CD5E /* Password.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785806CE25BD155A0097CD5E /* Password.swift */; };
+		78DD843225BF4F5000B9CA94 /* RealmAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DD843025BF4F4F00B9CA94 /* RealmAPI.swift */; };
+		78DD843325BF4F5000B9CA94 /* RealmAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DD843025BF4F4F00B9CA94 /* RealmAPI.swift */; };
+		78DD843425BF4F5000B9CA94 /* Credential.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DD843125BF4F5000B9CA94 /* Credential.swift */; };
+		78DD843525BF4F5000B9CA94 /* Credential.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DD843125BF4F5000B9CA94 /* Credential.swift */; };
+		78DD843B25BF4F6600B9CA94 /* AddCredsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DD843A25BF4F6600B9CA94 /* AddCredsViewController.swift */; };
+		78DD843C25BF4F6600B9CA94 /* AddCredsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DD843A25BF4F6600B9CA94 /* AddCredsViewController.swift */; };
+		78DD844225BF4F7200B9CA94 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78DD844125BF4F7200B9CA94 /* MainInterface.storyboard */; };
+		78DD844325BF4F7200B9CA94 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78DD844125BF4F7200B9CA94 /* MainInterface.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,12 +64,14 @@
 		7858068C25BD09150097CD5E /* extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = extension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		7858068E25BD09150097CD5E /* AuthenticationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AuthenticationServices.framework; path = System/Library/Frameworks/AuthenticationServices.framework; sourceTree = SDKROOT; };
 		7858069125BD09150097CD5E /* CredentialProviderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialProviderViewController.swift; sourceTree = "<group>"; };
-		7858069425BD09150097CD5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		7858069625BD09150097CD5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7858069725BD09150097CD5E /* extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = extension.entitlements; sourceTree = "<group>"; };
 		785806A125BD09940097CD5E /* passwd.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = passwd.entitlements; sourceTree = "<group>"; };
 		785806B325BD14570097CD5E /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
-		785806CE25BD155A0097CD5E /* Password.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Password.swift; sourceTree = "<group>"; };
+		78DD843025BF4F4F00B9CA94 /* RealmAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmAPI.swift; sourceTree = "<group>"; };
+		78DD843125BF4F5000B9CA94 /* Credential.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Credential.swift; sourceTree = "<group>"; };
+		78DD843A25BF4F6600B9CA94 /* AddCredsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCredsViewController.swift; sourceTree = "<group>"; };
+		78DD844125BF4F7200B9CA94 /* MainInterface.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +116,7 @@
 		7858067025BD086A0097CD5E /* passwd */ = {
 			isa = PBXGroup;
 			children = (
+				78DD842F25BF4F4400B9CA94 /* Realm */,
 				785806A125BD09940097CD5E /* passwd.entitlements */,
 				7858067125BD086A0097CD5E /* AppDelegate.swift */,
 				7858067325BD086A0097CD5E /* SceneDelegate.swift */,
@@ -131,9 +140,8 @@
 		7858069025BD09150097CD5E /* extension */ = {
 			isa = PBXGroup;
 			children = (
-				785806C425BD153A0097CD5E /* Model */,
+				78DD844125BF4F7200B9CA94 /* MainInterface.storyboard */,
 				785806B725BD149F0097CD5E /* ViewController */,
-				7858069325BD09150097CD5E /* MainInterface.storyboard */,
 				7858069625BD09150097CD5E /* Info.plist */,
 				7858069725BD09150097CD5E /* extension.entitlements */,
 			);
@@ -143,18 +151,20 @@
 		785806B725BD149F0097CD5E /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				78DD843A25BF4F6600B9CA94 /* AddCredsViewController.swift */,
 				7858069125BD09150097CD5E /* CredentialProviderViewController.swift */,
 				785806B325BD14570097CD5E /* TableViewCell.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
 		};
-		785806C425BD153A0097CD5E /* Model */ = {
+		78DD842F25BF4F4400B9CA94 /* Realm */ = {
 			isa = PBXGroup;
 			children = (
-				785806CE25BD155A0097CD5E /* Password.swift */,
+				78DD843125BF4F5000B9CA94 /* Credential.swift */,
+				78DD843025BF4F4F00B9CA94 /* RealmAPI.swift */,
 			);
-			path = Model;
+			path = Realm;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,6 +259,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7858067E25BD086B0097CD5E /* LaunchScreen.storyboard in Resources */,
+				78DD844225BF4F7200B9CA94 /* MainInterface.storyboard in Resources */,
 				7858067B25BD086B0097CD5E /* Assets.xcassets in Resources */,
 				7858067925BD086A0097CD5E /* Main.storyboard in Resources */,
 			);
@@ -258,7 +269,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7858069525BD09150097CD5E /* MainInterface.storyboard in Resources */,
+				78DD844325BF4F7200B9CA94 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,7 +280,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78DD843B25BF4F6600B9CA94 /* AddCredsViewController.swift in Sources */,
+				78DD843225BF4F5000B9CA94 /* RealmAPI.swift in Sources */,
 				7858067625BD086A0097CD5E /* ViewController.swift in Sources */,
+				78DD843425BF4F5000B9CA94 /* Credential.swift in Sources */,
 				7858067225BD086A0097CD5E /* AppDelegate.swift in Sources */,
 				7858067425BD086A0097CD5E /* SceneDelegate.swift in Sources */,
 			);
@@ -279,8 +293,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				785806CF25BD155A0097CD5E /* Password.swift in Sources */,
+				78DD843325BF4F5000B9CA94 /* RealmAPI.swift in Sources */,
+				78DD843525BF4F5000B9CA94 /* Credential.swift in Sources */,
 				7858069225BD09150097CD5E /* CredentialProviderViewController.swift in Sources */,
+				78DD843C25BF4F6600B9CA94 /* AddCredsViewController.swift in Sources */,
 				785806B425BD14570097CD5E /* TableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -310,14 +326,6 @@
 				7858067D25BD086B0097CD5E /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		7858069325BD09150097CD5E /* MainInterface.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7858069425BD09150097CD5E /* Base */,
-			);
-			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

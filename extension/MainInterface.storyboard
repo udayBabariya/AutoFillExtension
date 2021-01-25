@@ -25,6 +25,11 @@
                                                 <action selector="cancel:" destination="Xki-Si-B7m" id="6ap-3Q-iEX"/>
                                             </connections>
                                         </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="dPV-gQ-hUF">
+                                            <connections>
+                                                <action selector="cancel:" destination="Xki-Si-B7m" id="JxB-yZ-dnY"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -78,6 +83,62 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RwB-HB-TSk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-244" y="60.719640179910051"/>
+        </scene>
+        <!--Add Creds View Controller-->
+        <scene sceneID="ufp-By-fee">
+            <objects>
+                <viewController storyboardIdentifier="AddCredsViewController" id="piQ-yc-jEb" customClass="AddCredsViewController" customModule="extension" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1Bz-Rl-WA1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="dXk-X3-Px0">
+                                <rect key="frame" x="15" y="150" width="345" height="188"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="UserName" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fAt-sr-e8T">
+                                        <rect key="frame" x="0.0" y="0.0" width="345" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NIy-Ju-oLl">
+                                        <rect key="frame" x="0.0" y="54" width="345" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="akH-zH-z5K">
+                                        <rect key="frame" x="0.0" y="108" width="345" height="30"/>
+                                        <state key="normal" title="Add"/>
+                                        <connections>
+                                            <action selector="addButtonAction:" destination="piQ-yc-jEb" eventType="touchUpInside" id="LRe-gQ-hkP"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rRx-1p-MPW">
+                                        <rect key="frame" x="0.0" y="158" width="345" height="30"/>
+                                        <state key="normal" title="Cancel"/>
+                                        <connections>
+                                            <action selector="cancelButtonAction:" destination="piQ-yc-jEb" eventType="touchUpInside" id="WwK-9l-CCB"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Bdm-hU-Kvz"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dXk-X3-Px0" firstAttribute="leading" secondItem="Bdm-hU-Kvz" secondAttribute="leading" constant="15" id="2EO-Ah-zcV"/>
+                            <constraint firstItem="dXk-X3-Px0" firstAttribute="top" secondItem="Bdm-hU-Kvz" secondAttribute="top" constant="150" id="nQR-ob-WNX"/>
+                            <constraint firstItem="Bdm-hU-Kvz" firstAttribute="trailing" secondItem="dXk-X3-Px0" secondAttribute="trailing" constant="15" id="pF2-Tx-7n5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="addButton" destination="akH-zH-z5K" id="gZQ-GD-LWV"/>
+                        <outlet property="passwordTextField" destination="NIy-Ju-oLl" id="rkr-HJ-g8y"/>
+                        <outlet property="userNameTextField" destination="fAt-sr-e8T" id="bc8-OF-koi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="prr-QK-Rle" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="455" y="54"/>
         </scene>
     </scenes>
     <resources>
