@@ -13,22 +13,23 @@
 		7858067925BD086A0097CD5E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7858067725BD086A0097CD5E /* Main.storyboard */; };
 		7858067B25BD086B0097CD5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7858067A25BD086B0097CD5E /* Assets.xcassets */; };
 		7858067E25BD086B0097CD5E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7858067C25BD086B0097CD5E /* LaunchScreen.storyboard */; };
-		7858068F25BD09150097CD5E /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7858068E25BD09150097CD5E /* AuthenticationServices.framework */; };
-		7858069225BD09150097CD5E /* CredentialProviderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7858069125BD09150097CD5E /* CredentialProviderViewController.swift */; };
-		7858069525BD09150097CD5E /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7858069325BD09150097CD5E /* MainInterface.storyboard */; };
-		7858069A25BD09150097CD5E /* extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 7858068C25BD09150097CD5E /* extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		785806A225BD09940097CD5E /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7858068E25BD09150097CD5E /* AuthenticationServices.framework */; };
-		785806B425BD14570097CD5E /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785806B325BD14570097CD5E /* TableViewCell.swift */; };
-		785806CF25BD155A0097CD5E /* Password.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785806CE25BD155A0097CD5E /* Password.swift */; };
+		7889F34325C4685C009C4C25 /* Credential.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7889F34225C4685C009C4C25 /* Credential.swift */; };
+		7889F35525C47D59009C4C25 /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7858068E25BD09150097CD5E /* AuthenticationServices.framework */; };
+		7889F35825C47D59009C4C25 /* CredentialProviderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7889F35725C47D59009C4C25 /* CredentialProviderViewController.swift */; };
+		7889F35B25C47D59009C4C25 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7889F35925C47D59009C4C25 /* MainInterface.storyboard */; };
+		7889F36025C47D59009C4C25 /* credProvider.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 7889F35425C47D59009C4C25 /* credProvider.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		7889F36625C47DF0009C4C25 /* Credential.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7889F34225C4685C009C4C25 /* Credential.swift */; };
+		7889F36A25C482AE009C4C25 /* AddCredsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7889F36925C482AE009C4C25 /* AddCredsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		7858069825BD09150097CD5E /* PBXContainerItemProxy */ = {
+		7889F35E25C47D59009C4C25 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 7858066625BD086A0097CD5E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 7858068B25BD09150097CD5E;
-			remoteInfo = extension;
+			remoteGlobalIDString = 7889F35325C47D59009C4C25;
+			remoteInfo = credProvider;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -39,7 +40,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				7858069A25BD09150097CD5E /* extension.appex in Embed App Extensions */,
+				7889F36025C47D59009C4C25 /* credProvider.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -55,15 +56,15 @@
 		7858067A25BD086B0097CD5E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7858067D25BD086B0097CD5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7858067F25BD086B0097CD5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7858068C25BD09150097CD5E /* extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = extension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		7858068E25BD09150097CD5E /* AuthenticationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AuthenticationServices.framework; path = System/Library/Frameworks/AuthenticationServices.framework; sourceTree = SDKROOT; };
-		7858069125BD09150097CD5E /* CredentialProviderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialProviderViewController.swift; sourceTree = "<group>"; };
-		7858069425BD09150097CD5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
-		7858069625BD09150097CD5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7858069725BD09150097CD5E /* extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = extension.entitlements; sourceTree = "<group>"; };
 		785806A125BD09940097CD5E /* passwd.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = passwd.entitlements; sourceTree = "<group>"; };
-		785806B325BD14570097CD5E /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
-		785806CE25BD155A0097CD5E /* Password.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Password.swift; sourceTree = "<group>"; };
+		7889F34225C4685C009C4C25 /* Credential.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credential.swift; sourceTree = "<group>"; };
+		7889F35425C47D59009C4C25 /* credProvider.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = credProvider.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		7889F35725C47D59009C4C25 /* CredentialProviderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialProviderViewController.swift; sourceTree = "<group>"; };
+		7889F35A25C47D59009C4C25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		7889F35C25C47D59009C4C25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7889F35D25C47D59009C4C25 /* credProvider.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = credProvider.entitlements; sourceTree = "<group>"; };
+		7889F36925C482AE009C4C25 /* AddCredsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCredsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,11 +76,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7858068925BD09150097CD5E /* Frameworks */ = {
+		7889F35125C47D59009C4C25 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7858068F25BD09150097CD5E /* AuthenticationServices.framework in Frameworks */,
+				7889F35525C47D59009C4C25 /* AuthenticationServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,7 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				7858067025BD086A0097CD5E /* passwd */,
-				7858069025BD09150097CD5E /* extension */,
+				7889F35625C47D59009C4C25 /* credProvider */,
 				7858068D25BD09150097CD5E /* Frameworks */,
 				7858066F25BD086A0097CD5E /* Products */,
 			);
@@ -100,7 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				7858066E25BD086A0097CD5E /* passwd.app */,
-				7858068C25BD09150097CD5E /* extension.appex */,
+				7889F35425C47D59009C4C25 /* credProvider.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -109,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				785806A125BD09940097CD5E /* passwd.entitlements */,
+				7889F34225C4685C009C4C25 /* Credential.swift */,
 				7858067125BD086A0097CD5E /* AppDelegate.swift */,
 				7858067325BD086A0097CD5E /* SceneDelegate.swift */,
 				7858067525BD086A0097CD5E /* ViewController.swift */,
@@ -128,46 +130,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		7858069025BD09150097CD5E /* extension */ = {
+		7889F35625C47D59009C4C25 /* credProvider */ = {
 			isa = PBXGroup;
 			children = (
-				785806C425BD153A0097CD5E /* Model */,
-				785806B725BD149F0097CD5E /* ViewController */,
-				7858069325BD09150097CD5E /* MainInterface.storyboard */,
-				7858069625BD09150097CD5E /* Info.plist */,
-				7858069725BD09150097CD5E /* extension.entitlements */,
+				7889F35725C47D59009C4C25 /* CredentialProviderViewController.swift */,
+				7889F36925C482AE009C4C25 /* AddCredsViewController.swift */,
+				7889F35925C47D59009C4C25 /* MainInterface.storyboard */,
+				7889F35C25C47D59009C4C25 /* Info.plist */,
+				7889F35D25C47D59009C4C25 /* credProvider.entitlements */,
 			);
-			path = extension;
-			sourceTree = "<group>";
-		};
-		785806B725BD149F0097CD5E /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				7858069125BD09150097CD5E /* CredentialProviderViewController.swift */,
-				785806B325BD14570097CD5E /* TableViewCell.swift */,
-			);
-			path = ViewController;
-			sourceTree = "<group>";
-		};
-		785806C425BD153A0097CD5E /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				785806CE25BD155A0097CD5E /* Password.swift */,
-			);
-			path = Model;
+			path = credProvider;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
-
-/* Begin PBXHeadersBuildPhase section */
-		785806A525BD0B440097CD5E /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		7858066D25BD086A0097CD5E /* passwd */ = {
@@ -182,29 +157,28 @@
 			buildRules = (
 			);
 			dependencies = (
-				7858069925BD09150097CD5E /* PBXTargetDependency */,
+				7889F35F25C47D59009C4C25 /* PBXTargetDependency */,
 			);
 			name = passwd;
 			productName = passwd;
 			productReference = 7858066E25BD086A0097CD5E /* passwd.app */;
 			productType = "com.apple.product-type.application";
 		};
-		7858068B25BD09150097CD5E /* extension */ = {
+		7889F35325C47D59009C4C25 /* credProvider */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7858069B25BD09150097CD5E /* Build configuration list for PBXNativeTarget "extension" */;
+			buildConfigurationList = 7889F36125C47D59009C4C25 /* Build configuration list for PBXNativeTarget "credProvider" */;
 			buildPhases = (
-				785806A525BD0B440097CD5E /* Headers */,
-				7858068825BD09150097CD5E /* Sources */,
-				7858068925BD09150097CD5E /* Frameworks */,
-				7858068A25BD09150097CD5E /* Resources */,
+				7889F35025C47D59009C4C25 /* Sources */,
+				7889F35125C47D59009C4C25 /* Frameworks */,
+				7889F35225C47D59009C4C25 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = extension;
-			productName = extension;
-			productReference = 7858068C25BD09150097CD5E /* extension.appex */;
+			name = credProvider;
+			productName = credProvider;
+			productReference = 7889F35425C47D59009C4C25 /* credProvider.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
@@ -213,14 +187,14 @@
 		7858066625BD086A0097CD5E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1230;
+				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1230;
 				TargetAttributes = {
 					7858066D25BD086A0097CD5E = {
 						CreatedOnToolsVersion = 12.3;
 					};
-					7858068B25BD09150097CD5E = {
-						CreatedOnToolsVersion = 12.3;
+					7889F35325C47D59009C4C25 = {
+						CreatedOnToolsVersion = 12.4;
 					};
 				};
 			};
@@ -238,7 +212,7 @@
 			projectRoot = "";
 			targets = (
 				7858066D25BD086A0097CD5E /* passwd */,
-				7858068B25BD09150097CD5E /* extension */,
+				7889F35325C47D59009C4C25 /* credProvider */,
 			);
 		};
 /* End PBXProject section */
@@ -254,11 +228,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7858068A25BD09150097CD5E /* Resources */ = {
+		7889F35225C47D59009C4C25 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7858069525BD09150097CD5E /* MainInterface.storyboard in Resources */,
+				7889F35B25C47D59009C4C25 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,27 +245,28 @@
 			files = (
 				7858067625BD086A0097CD5E /* ViewController.swift in Sources */,
 				7858067225BD086A0097CD5E /* AppDelegate.swift in Sources */,
+				7889F34325C4685C009C4C25 /* Credential.swift in Sources */,
 				7858067425BD086A0097CD5E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7858068825BD09150097CD5E /* Sources */ = {
+		7889F35025C47D59009C4C25 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				785806CF25BD155A0097CD5E /* Password.swift in Sources */,
-				7858069225BD09150097CD5E /* CredentialProviderViewController.swift in Sources */,
-				785806B425BD14570097CD5E /* TableViewCell.swift in Sources */,
+				7889F36A25C482AE009C4C25 /* AddCredsViewController.swift in Sources */,
+				7889F36625C47DF0009C4C25 /* Credential.swift in Sources */,
+				7889F35825C47D59009C4C25 /* CredentialProviderViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		7858069925BD09150097CD5E /* PBXTargetDependency */ = {
+		7889F35F25C47D59009C4C25 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 7858068B25BD09150097CD5E /* extension */;
-			targetProxy = 7858069825BD09150097CD5E /* PBXContainerItemProxy */;
+			target = 7889F35325C47D59009C4C25 /* credProvider */;
+			targetProxy = 7889F35E25C47D59009C4C25 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -312,10 +287,10 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		7858069325BD09150097CD5E /* MainInterface.storyboard */ = {
+		7889F35925C47D59009C4C25 /* MainInterface.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				7858069425BD09150097CD5E /* Base */,
+				7889F35A25C47D59009C4C25 /* Base */,
 			);
 			name = MainInterface.storyboard;
 			sourceTree = "<group>";
@@ -483,19 +458,20 @@
 			};
 			name = Release;
 		};
-		7858069C25BD09150097CD5E /* Debug */ = {
+		7889F36225C47D59009C4C25 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = extension/extension.entitlements;
+				CODE_SIGN_ENTITLEMENTS = credProvider/credProvider.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GU6TNC55T8;
-				INFOPLIST_FILE = extension/Info.plist;
+				INFOPLIST_FILE = credProvider/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.uday.passwd.extension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.uday.passwd.credProvider;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -503,19 +479,20 @@
 			};
 			name = Debug;
 		};
-		7858069D25BD09150097CD5E /* Release */ = {
+		7889F36325C47D59009C4C25 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = extension/extension.entitlements;
+				CODE_SIGN_ENTITLEMENTS = credProvider/credProvider.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GU6TNC55T8;
-				INFOPLIST_FILE = extension/Info.plist;
+				INFOPLIST_FILE = credProvider/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.uday.passwd.extension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.uday.passwd.credProvider;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -544,11 +521,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7858069B25BD09150097CD5E /* Build configuration list for PBXNativeTarget "extension" */ = {
+		7889F36125C47D59009C4C25 /* Build configuration list for PBXNativeTarget "credProvider" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7858069C25BD09150097CD5E /* Debug */,
-				7858069D25BD09150097CD5E /* Release */,
+				7889F36225C47D59009C4C25 /* Debug */,
+				7889F36325C47D59009C4C25 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
