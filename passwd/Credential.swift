@@ -22,7 +22,7 @@ class PlistManager{
     
     static private var plistUrl: URL{
         let fileManager = FileManager.default
-        let directory = fileManager.containerURL(forSecurityApplicationGroupIdentifier: "com.uday.pass")!
+        let directory = fileManager.containerURL(forSecurityApplicationGroupIdentifier: "com.uday.passwd")!
         return directory.appendingPathComponent("\(fileName)" + "." + "\(fileType)")
     }
     
