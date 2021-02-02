@@ -12,6 +12,15 @@ import Foundation
 struct Credential: Codable{
     var userName = ""
     var password = ""
+    
+    var asDictionary : String {
+        let mirror = Mirror(reflecting: self)
+        let dict = Dictionary(uniqueKeysWithValues: mirror.children.lazy.map({ (label:String?, value:Any) -> (String, Any)? in
+          guard let label = label else { return nil }
+          return (label, value)
+        }).compactMap { $0 })
+        return dict.jsonString
+      }
 }
 
 
@@ -27,7 +36,7 @@ class PlistManager{
     }
     
     
-    static func load() -> [Credential]{
+    public static func load() -> [Credential]{
         let decoder = PropertyListDecoder()
         
         guard let data = try? Data.init(contentsOf: plistUrl),
@@ -46,7 +55,7 @@ class PlistManager{
         }
     }
     
-    static func write(cred: Credential){
+    public static func write(cred: Credential){
         let encoder = PropertyListEncoder()
         if let data = try? encoder.encode([cred]){
             if !FileManager.default.fileExists(atPath: plistUrl.path){
@@ -65,5 +74,22 @@ class PlistManager{
                 }
             }
         }
+    }
+}
+
+
+extension Dictionary {
+
+    var jsonString:String {
+
+        do {
+            let stringData = try JSONSerialization.data(withJSONObject: self, options: .fragmentsAllowed)
+            if let string = String(data: stringData, encoding: .utf8) {
+                return string
+            }
+        }catch _ {
+
+        }
+        return ""
     }
 }

@@ -110,8 +110,8 @@
 			isa = PBXGroup;
 			children = (
 				785806A125BD09940097CD5E /* passwd.entitlements */,
-				7889F34225C4685C009C4C25 /* Credential.swift */,
 				7858067125BD086A0097CD5E /* AppDelegate.swift */,
+				7889F34225C4685C009C4C25 /* Credential.swift */,
 				7858067325BD086A0097CD5E /* SceneDelegate.swift */,
 				7858067525BD086A0097CD5E /* ViewController.swift */,
 				7858067725BD086A0097CD5E /* Main.storyboard */,
