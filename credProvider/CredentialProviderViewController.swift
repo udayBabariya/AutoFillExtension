@@ -12,10 +12,11 @@ class CredentialProviderViewController: ASCredentialProviderViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    var passwords = PlistManager.load()
+    var passwords = [Credential]()
      
     
     override func prepareCredentialList(for serviceIdentifiers: [ASCredentialServiceIdentifier]) {
+        passwords = PlistManager.load() ?? [Credential]()
         tableView.register(Cell.self, forCellReuseIdentifier: "cell")
         tableView.dataSource = self
         tableView.delegate = self
@@ -38,7 +39,11 @@ class CredentialProviderViewController: ASCredentialProviderViewController {
     
     @IBAction func deleteAllButtonAction(_ sender: UIButton){
         PlistManager.removeAll()
-        passwords = PlistManager.load()
+        fetchPasswords_ReloadTV()
+    }
+    
+    func fetchPasswords_ReloadTV(){
+        passwords = PlistManager.load() ?? [Credential]()
         tableView.reloadData()
     }
 }
@@ -47,8 +52,7 @@ class CredentialProviderViewController: ASCredentialProviderViewController {
 
 extension CredentialProviderViewController: addCredVCDelegate{
     func credAdded() {
-        passwords = PlistManager.load()
-        tableView.reloadData()
+        fetchPasswords_ReloadTV()
     }
 }
 
@@ -79,8 +83,7 @@ extension CredentialProviderViewController: UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete{
             PlistManager.delete(cred: passwords[indexPath.row])
-            passwords = PlistManager.load()
-            tableView.reloadData()
+            fetchPasswords_ReloadTV()
         }
     }
 }

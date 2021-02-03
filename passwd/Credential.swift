@@ -26,7 +26,7 @@ struct Credential: Codable{
 
 class PlistManager{
     
-    static let fileName = "paswords"
+    static let fileName = "pass"
     static let fileType = "plist"
     
     static private var plistUrl: URL{
@@ -35,44 +35,50 @@ class PlistManager{
         return directory.appendingPathComponent("\(fileName)" + "." + "\(fileType)")
     }
     
+    /// create local storage file if needed
+    static private func createPlistFileIfNeeded(){
+        if !FileManager.default.fileExists(atPath: PlistManager.plistUrl.path){
+            let creds = [Credential(userName: "", password: "")]
+            if let dataToWrite = try? PropertyListEncoder().encode(creds){
+                try? dataToWrite.write(to: PlistManager.plistUrl)
+                PlistManager.removeAll()
+            }
+        }
+    }
     
-    public static func load() -> [Credential]{
+    
+    /// to get all stored creds
+    public static func load() -> [Credential]?{
         let decoder = PropertyListDecoder()
-        
+        createPlistFileIfNeeded()
         guard let data = try? Data.init(contentsOf: plistUrl),
               let creds = try? decoder.decode([Credential].self, from: data)
-        else {return [Credential(userName: "demo", password: "demo")]}
+        else {return nil}
         
         return creds
     }
     
-    
-    static func copyCredsFrombundle(){
-        if let path = Bundle.main.path(forResource: fileName, ofType: fileType),
-           let data = FileManager.default.contents(atPath: path),
-           FileManager.default.fileExists(atPath: plistUrl.path) == false {
-            FileManager.default.createFile(atPath: plistUrl.path, contents: data, attributes: nil)
-        }
-    }
-    
+   
+    /// to save new creds in local storage
     public static func write(cred: Credential){
         let encoder = PropertyListEncoder()
-        if let data = try? encoder.encode([cred]){
-            if !FileManager.default.fileExists(atPath: plistUrl.path){
-                FileManager.default.createFile(atPath: plistUrl.path, contents: data, attributes: nil)
+        var creds = [Credential]()
+        createPlistFileIfNeeded()
+        let decoder = PropertyListDecoder()
+        
+        if let existingData = try? Data.init(contentsOf: plistUrl){
+            if let tempCreds = try? decoder.decode([Credential].self, from: existingData){
+                creds.append(contentsOf: tempCreds)
+                creds.append(cred)
             }else{
-            
-                let decoder = PropertyListDecoder()
-                if let existingData = try? Data.init(contentsOf: plistUrl),
-                   var creds = try? decoder.decode([Credential].self, from: existingData){
-                    creds.append(cred)
-                    
-                    if let dataToWrite = try? encoder.encode(creds){
-                        // Save to plist
-                        try? dataToWrite.write(to: plistUrl)
-                    }
-                }
+                creds.append(cred)
+                print("file is empty")
             }
+        }
+        
+        if let dataToWrite = try? encoder.encode(creds){
+            // Save to plist
+            try? dataToWrite.write(to: plistUrl)
         }
     }
     

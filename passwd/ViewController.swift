@@ -16,7 +16,7 @@ class ViewController: UIViewController {
         tap.addTarget(self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tap)
         
-        print(PlistManager.load().first?.asDictionary)
+//        print(PlistManager.load().first?.asDictionary)
         
         // to add cred to plist storage manually
 //        let cred = Credential(userName: "userName", password: "Password")
@@ -25,8 +25,8 @@ class ViewController: UIViewController {
         
         /// to get all creds from plist storage
         /// return type - array of creds
-        let allCreds = PlistManager.load()
-        print(allCreds)
+//        let allCreds = PlistManager.load()
+//        print(allCreds)
         
     }
 
