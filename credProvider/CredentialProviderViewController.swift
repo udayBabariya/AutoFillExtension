@@ -35,7 +35,15 @@ class CredentialProviderViewController: ASCredentialProviderViewController {
         addCredVC.delegate = self
        present(addCredVC, animated: true)
     }
+    
+    @IBAction func deleteAllButtonAction(_ sender: UIButton){
+        PlistManager.removeAll()
+        passwords = PlistManager.load()
+        tableView.reloadData()
+    }
 }
+
+
 
 extension CredentialProviderViewController: addCredVCDelegate{
     func credAdded() {
@@ -62,6 +70,18 @@ extension CredentialProviderViewController: UITableViewDelegate, UITableViewData
         let cred = passwords[indexPath.row]
         let passwordCredential = ASPasswordCredential(user: cred.userName, password: cred.password)
         self.extensionContext.completeRequest(withSelectedCredential: passwordCredential, completionHandler: nil)
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete{
+            PlistManager.delete(cred: passwords[indexPath.row])
+            passwords = PlistManager.load()
+            tableView.reloadData()
+        }
     }
 }
 

@@ -25,11 +25,18 @@
                                                 <action selector="cancel:" destination="Xki-Si-B7m" id="6ap-3Q-iEX"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="rT4-hz-vdc">
-                                            <connections>
-                                                <action selector="addCredButtonAction:" destination="Xki-Si-B7m" id="c3e-8E-pwW"/>
-                                            </connections>
-                                        </barButtonItem>
+                                        <rightBarButtonItems>
+                                            <barButtonItem systemItem="add" id="rT4-hz-vdc">
+                                                <connections>
+                                                    <action selector="addCredButtonAction:" destination="Xki-Si-B7m" id="c3e-8E-pwW"/>
+                                                </connections>
+                                            </barButtonItem>
+                                            <barButtonItem systemItem="trash" id="EMu-Oq-n6g">
+                                                <connections>
+                                                    <action selector="deleteAllButtonAction:" destination="Xki-Si-B7m" id="iVo-ST-1Yu"/>
+                                                </connections>
+                                            </barButtonItem>
+                                        </rightBarButtonItems>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -61,7 +68,7 @@
         <!--Add Creds View Controller-->
         <scene sceneID="qpT-YN-Vz1">
             <objects>
-                <viewController storyboardIdentifier="AddCredsViewController" id="nDS-ra-y7o" customClass="AddCredsViewController" customModule="extension" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddCredsViewController" id="nDS-ra-y7o" customClass="AddCredsViewController" customModule="credProvider" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nMT-3T-X6E">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

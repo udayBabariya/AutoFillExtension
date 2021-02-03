@@ -75,6 +75,42 @@ class PlistManager{
             }
         }
     }
+    
+    ///to delete credential from plistDatabase
+    public static func delete(cred: Credential){
+        
+        let decoder = PropertyListDecoder()
+        
+        if let data = try? Data.init(contentsOf: plistUrl),
+              var creds = try? decoder.decode([Credential].self, from: data){
+            for (i,tempCred) in creds.enumerated(){
+                if tempCred.userName == cred.userName && tempCred.password == cred.password{
+                    creds.remove(at: i)
+                    break
+                }
+            }
+            if let dataToWrite = try? PropertyListEncoder().encode(creds){
+                // Save to plist
+                try? dataToWrite.write(to: plistUrl)
+            }
+        }
+    }
+    
+    ///to remove all creds stored in database
+    public static func removeAll(){
+        let decoder = PropertyListDecoder()
+        
+        if let data = try? Data.init(contentsOf: plistUrl),
+              var creds = try? decoder.decode([Credential].self, from: data){
+            creds.removeAll()
+            if let dataToWrite = try? PropertyListEncoder().encode(creds){
+                // Save to plist
+                try? dataToWrite.write(to: plistUrl)
+            }
+        }
+    }
+    
+    
 }
 
 

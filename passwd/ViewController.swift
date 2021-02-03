@@ -19,8 +19,8 @@ class ViewController: UIViewController {
         print(PlistManager.load().first?.asDictionary)
         
         // to add cred to plist storage manually
-        let cred = Credential(userName: "userName", password: "Password")
-        PlistManager.write(cred: cred)
+//        let cred = Credential(userName: "userName", password: "Password")
+//        PlistManager.write(cred: cred)
         
         
         /// to get all creds from plist storage
