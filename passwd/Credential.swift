@@ -78,18 +78,13 @@ class PlistManager{
 }
 
 
+//used to convert string JSON from Dictionary
 extension Dictionary {
-
     var jsonString:String {
-
-        do {
-            let stringData = try JSONSerialization.data(withJSONObject: self, options: .fragmentsAllowed)
-            if let string = String(data: stringData, encoding: .utf8) {
-                return string
-            }
-        }catch _ {
-
-        }
-        return ""
+        let jsonData = try? JSONSerialization.data(withJSONObject: self, options: [])
+        guard jsonData != nil else {return ""}
+        let jsonString = String(data: jsonData!, encoding: .utf8)
+        guard jsonString != nil else {return ""}
+        return jsonString!
     }
 }
