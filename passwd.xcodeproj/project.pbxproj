@@ -21,6 +21,8 @@
 		7889F36025C47D59009C4C25 /* credProvider.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 7889F35425C47D59009C4C25 /* credProvider.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		7889F36625C47DF0009C4C25 /* Credential.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7889F34225C4685C009C4C25 /* Credential.swift */; };
 		7889F36A25C482AE009C4C25 /* AddCredsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7889F36925C482AE009C4C25 /* AddCredsViewController.swift */; };
+		7890576825CC5B0600B2DEFD /* AES.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7890576725CC5B0600B2DEFD /* AES.swift */; };
+		7890576B25CC5C8700B2DEFD /* AES.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7890576725CC5B0600B2DEFD /* AES.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,7 @@
 		7889F35C25C47D59009C4C25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7889F35D25C47D59009C4C25 /* credProvider.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = credProvider.entitlements; sourceTree = "<group>"; };
 		7889F36925C482AE009C4C25 /* AddCredsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCredsViewController.swift; sourceTree = "<group>"; };
+		7890576725CC5B0600B2DEFD /* AES.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AES.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +121,7 @@
 				7858067A25BD086B0097CD5E /* Assets.xcassets */,
 				7858067C25BD086B0097CD5E /* LaunchScreen.storyboard */,
 				7858067F25BD086B0097CD5E /* Info.plist */,
+				7890576725CC5B0600B2DEFD /* AES.swift */,
 			);
 			path = passwd;
 			sourceTree = "<group>";
@@ -247,6 +251,7 @@
 				7858067225BD086A0097CD5E /* AppDelegate.swift in Sources */,
 				7889F34325C4685C009C4C25 /* Credential.swift in Sources */,
 				7858067425BD086A0097CD5E /* SceneDelegate.swift in Sources */,
+				7890576825CC5B0600B2DEFD /* AES.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7889F36A25C482AE009C4C25 /* AddCredsViewController.swift in Sources */,
+				7890576B25CC5C8700B2DEFD /* AES.swift in Sources */,
 				7889F36625C47DF0009C4C25 /* Credential.swift in Sources */,
 				7889F35825C47D59009C4C25 /* CredentialProviderViewController.swift in Sources */,
 			);

@@ -72,7 +72,7 @@ extension CredentialProviderViewController: UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cred = passwords[indexPath.row]
-        let passwordCredential = ASPasswordCredential(user: cred.userName, password: cred.password)
+        let passwordCredential = ASPasswordCredential(user: cred.userName, password: AES.decryptWithBase64(string: cred.password))
         self.extensionContext.completeRequest(withSelectedCredential: passwordCredential, completionHandler: nil)
     }
     
@@ -80,11 +80,28 @@ extension CredentialProviderViewController: UITableViewDelegate, UITableViewData
         return true
     }
     
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete{
-            PlistManager.delete(cred: passwords[indexPath.row])
-            fetchPasswords_ReloadTV()
+//    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+//        if editingStyle == .delete{
+//            PlistManager.delete(cred: passwords[indexPath.row])
+//            fetchPasswords_ReloadTV()
+//        }
+//    }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let tempCred =  passwords[indexPath.row]
+        let delete = UIContextualAction(style: .destructive, title: "Delete") { (action, view, bool) in
+            PlistManager.delete(cred: tempCred)
+            self.fetchPasswords_ReloadTV()
         }
+        
+        let edit = UIContextualAction(style: .normal, title: "Edit") { (action, view, bool) in
+            guard let addCredVC = self.storyboard?.instantiateViewController(identifier: "AddCredsViewController") as? AddCredsViewController else {return}
+            addCredVC.delegate = self
+            addCredVC.usedForUpdate = true
+            addCredVC.cred = tempCred
+            self.present(addCredVC, animated: true)
+        }
+        return UISwipeActionsConfiguration(actions: [delete,edit])
     }
 }
 

@@ -10,6 +10,8 @@ import Foundation
 
 ///Credential model
 struct Credential: Codable{
+    var id = ""
+    var domain = ""
     var userName = ""
     var password = ""
     
@@ -23,22 +25,29 @@ struct Credential: Codable{
       }
 }
 
-
+///Plist file for local database
 class PlistManager{
     
     static let fileName = "pass"
     static let fileType = "plist"
     
+    ///shared instance
+    static let shared = PlistManager()
+    
+    private init(){}
+    
+    ///provides local url for plist data file
     static private var plistUrl: URL{
         let fileManager = FileManager.default
-        let directory = fileManager.containerURL(forSecurityApplicationGroupIdentifier: "com.uday.passwd")!
+        let directory = fileManager.containerURL(forSecurityApplicationGroupIdentifier: "group.pwUdayDemo")!
         return directory.appendingPathComponent("\(fileName)" + "." + "\(fileType)")
     }
     
     /// create local storage file if needed
     static private func createPlistFileIfNeeded(){
         if !FileManager.default.fileExists(atPath: PlistManager.plistUrl.path){
-            let creds = [Credential(userName: "", password: "")]
+            let creds = [Credential(id: UUID().uuidString, domain: "", userName: "", password: "")]
+            
             if let dataToWrite = try? PropertyListEncoder().encode(creds){
                 try? dataToWrite.write(to: PlistManager.plistUrl)
                 PlistManager.removeAll()
@@ -56,6 +65,11 @@ class PlistManager{
         else {return nil}
         
         return creds
+    }
+    
+    ///Provide total no. of creds stored in local database
+    static var totalCreds: Int {
+        return load()?.count ?? 0
     }
     
    
@@ -84,13 +98,12 @@ class PlistManager{
     
     ///to delete credential from plistDatabase
     public static func delete(cred: Credential){
-        
+    
         let decoder = PropertyListDecoder()
-        
         if let data = try? Data.init(contentsOf: plistUrl),
               var creds = try? decoder.decode([Credential].self, from: data){
             for (i,tempCred) in creds.enumerated(){
-                if tempCred.userName == cred.userName && tempCred.password == cred.password{
+                if tempCred.id == cred.id{
                     creds.remove(at: i)
                     break
                 }
@@ -101,6 +114,29 @@ class PlistManager{
             }
         }
     }
+    
+    
+    ///to delete credential from plistDatabase
+    public static func edit(cred: Credential){
+    
+        let decoder = PropertyListDecoder()
+        if let data = try? Data.init(contentsOf: plistUrl),
+              var creds = try? decoder.decode([Credential].self, from: data){
+            for (i,tempCred) in creds.enumerated(){
+                if tempCred.id == cred.id{
+                    creds.remove(at: i)//remove old
+                    creds.insert(cred, at: i)//insert new
+                    break
+                }
+            }
+            
+            if let dataToWrite = try? PropertyListEncoder().encode(creds){
+                // Save to plist
+                try? dataToWrite.write(to: plistUrl)
+            }
+        }
+    }
+    
     
     ///to remove all creds stored in database
     public static func removeAll(){
