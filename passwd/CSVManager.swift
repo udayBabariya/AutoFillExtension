@@ -79,6 +79,37 @@ class CSVManager{
         print(tableString)
     }
     
+    public static func createCredsFromCSV(file:String) -> [Credential]?{
+        var creds = [Credential]()
+        convertCSV(file: file)
+        data.remove(at: 0)// to avoide column header
+        for row in data{
+            var cred = Credential()
+            for (index,fieldName) in columnTitles.enumerated(){
+                guard let field = row[fieldName] else{
+                    print("field not found: \(fieldName)")
+                    continue
+                }
+                if fieldName.lowercased().contains("id"){
+                    cred.id = field
+                }
+                if fieldName.lowercased().contains("username"){
+                    cred.userName = field
+                }
+                if fieldName.lowercased().contains("password"){
+                    cred.password = field
+                }
+                if fieldName.lowercased().contains("domain"){
+                    cred.domain = field
+                }
+                if index == 3 {
+                    creds.append(cred)
+                }
+            }
+        }
+        return creds
+    }
+    
     
     // MARK: CSV file creating
     public static func creatCSV(creds: [Credential]) -> URL? {

@@ -7,6 +7,7 @@
 
 import UIKit
 import AuthenticationServices
+import MobileCoreServices
 
 class CredentialProviderViewController: ASCredentialProviderViewController {
 
@@ -53,6 +54,14 @@ class CredentialProviderViewController: ASCredentialProviderViewController {
                 shareCsv(fileURL: localUrl)
             }
         }
+    }
+    
+    @IBAction func pickCSV(){
+        let documentPicker = UIDocumentPickerViewController(documentTypes: [String(kUTTypeText)], in: .import)
+           documentPicker.delegate = self
+           documentPicker.allowsMultipleSelection = false
+           documentPicker.modalPresentationStyle = .fullScreen
+           present(documentPicker, animated: true, completion: nil)
     }
     
     
@@ -118,6 +127,27 @@ extension CredentialProviderViewController: UITableViewDelegate, UITableViewData
             self.present(addCredVC, animated: true)
         }
         return UISwipeActionsConfiguration(actions: [delete,edit])
+    }
+}
+
+//MARK:- document picker delegate
+extension CredentialProviderViewController: UIDocumentPickerDelegate {
+    
+    public func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentsAt urls: [URL]) {
+        guard controller.documentPickerMode == .import, let url = urls.first else { return }
+        if let strData = try? String(contentsOf: url) {
+            if let creds = CSVManager.createCredsFromCSV(file: strData) {
+                for cred in creds{
+                    PlistManager.write(cred: cred)
+                    fetchPasswords_ReloadTV()
+                }
+            }
+        }
+        controller.dismiss(animated: true)
+    }
+    
+    public func documentPickerWasCancelled(_ controller: UIDocumentPickerViewController) {
+        controller.dismiss(animated: true)
     }
 }
 

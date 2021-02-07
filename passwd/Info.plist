@@ -60,5 +60,11 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSDocumentsFolderUsageDescription</key>
+	<string>To fetch stored files</string>
+	<key>NSFileProviderPresenceUsageDescription</key>
+	<string>To fetch stored files</string>
+	<key>NSDownloadsFolderUsageDescription</key>
+	<string>te fetch stored files</string>
 </dict>
 </plist>

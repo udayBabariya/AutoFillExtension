@@ -6,8 +6,11 @@
 //
 
 import UIKit
+import MobileCoreServices
 
 class ViewController: UIViewController {
+    
+    var isFirstTime = true
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,45 +24,42 @@ class ViewController: UIViewController {
         // to add cred to plist storage manually
 //        let cred = Credential(id: UUID().uuidString, domain: "", userName: "", password: "")
 //        PlistManager.write(cred: cred)
-
-
-        
     }
      
 
     @objc func dismissKeyboard(){
         view.endEditing(true)
     }
+    
 }
 
-//class ViewController: UIViewController {
-//
-//var creds = [Credential]()
-//var cred: Credential!
-//
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//        //
-//        //
-//
-//    }
-//
-//    override func viewDidAppear(_ animated: Bool) {
-//        super.viewDidAppear(animated)
-//        cred = Credential()
-//        for _ in 0..<5 {
-//            cred.id = UUID().uuidString
-//            cred.userName = "userName"
-//            cred.password = "abc"
-//            cred.domain = "www.facebook.com"
-//            creds.append(cred)
-//        }
-//        if let path = creatCSV(){
-//            shareCsv(fileURL: path)
-//        }
-//
-//    }
-//
-//
-//}
+extension ViewController: DocumentDelegate{
+    /// callback from the document picker
+        func didPickDocument(document: Document?) {
+            if let pickedDoc = document {
+                let fileURL = pickedDoc.fileURL
+                print(fileURL)
+                /// do what you want with the file URL
+            }
+        }
+}
 
+extension ViewController: UIDocumentPickerDelegate {
+  
+    public func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentsAt urls: [URL]) {
+        guard controller.documentPickerMode == .import, let url = urls.first else { return }
+        if let strData = try? String(contentsOf: url) {
+//            CSVManager.printData(file: strData)
+            let creds = CSVManager.createCredsFromCSV(file: strData)
+            print(creds)
+//            for cred in creds{
+//                PlistManager.write(cred: cred)
+//            }
+        }
+        controller.dismiss(animated: true)
+    }
+    
+    public func documentPickerWasCancelled(_ controller: UIDocumentPickerViewController) {
+        controller.dismiss(animated: true)
+    }
+}
