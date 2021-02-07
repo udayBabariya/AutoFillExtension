@@ -21,6 +21,8 @@
 		7889F36025C47D59009C4C25 /* credProvider.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 7889F35425C47D59009C4C25 /* credProvider.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		7889F36625C47DF0009C4C25 /* Credential.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7889F34225C4685C009C4C25 /* Credential.swift */; };
 		7889F36A25C482AE009C4C25 /* AddCredsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7889F36925C482AE009C4C25 /* AddCredsViewController.swift */; };
+		788BDCB825CFF63500117A19 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788BDCB725CFF63500117A19 /* UIApplication.swift */; };
+		788BDCBD25CFFB8900117A19 /* CSVManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FC5B3A25CD887F002F30BC /* CSVManager.swift */; };
 		7890576825CC5B0600B2DEFD /* AES.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7890576725CC5B0600B2DEFD /* AES.swift */; };
 		7890576B25CC5C8700B2DEFD /* AES.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7890576725CC5B0600B2DEFD /* AES.swift */; };
 		78FC5B3B25CD887F002F30BC /* CSVManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FC5B3A25CD887F002F30BC /* CSVManager.swift */; };
@@ -69,6 +71,7 @@
 		7889F35C25C47D59009C4C25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7889F35D25C47D59009C4C25 /* credProvider.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = credProvider.entitlements; sourceTree = "<group>"; };
 		7889F36925C482AE009C4C25 /* AddCredsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCredsViewController.swift; sourceTree = "<group>"; };
+		788BDCB725CFF63500117A19 /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
 		7890576725CC5B0600B2DEFD /* AES.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AES.swift; sourceTree = "<group>"; };
 		78FC5B3A25CD887F002F30BC /* CSVManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVManager.swift; sourceTree = "<group>"; };
 		78FC5B3E25CD89AB002F30BC /* test.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test.txt; sourceTree = "<group>"; };
@@ -116,6 +119,7 @@
 		7858067025BD086A0097CD5E /* passwd */ = {
 			isa = PBXGroup;
 			children = (
+				788BDCB625CFF62400117A19 /* Extension */,
 				785806A125BD09940097CD5E /* passwd.entitlements */,
 				7858067125BD086A0097CD5E /* AppDelegate.swift */,
 				7889F34225C4685C009C4C25 /* Credential.swift */,
@@ -150,6 +154,14 @@
 				7889F35D25C47D59009C4C25 /* credProvider.entitlements */,
 			);
 			path = credProvider;
+			sourceTree = "<group>";
+		};
+		788BDCB625CFF62400117A19 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				788BDCB725CFF63500117A19 /* UIApplication.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,6 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				78FC5B3B25CD887F002F30BC /* CSVManager.swift in Sources */,
+				788BDCB825CFF63500117A19 /* UIApplication.swift in Sources */,
 				7858067625BD086A0097CD5E /* ViewController.swift in Sources */,
 				7858067225BD086A0097CD5E /* AppDelegate.swift in Sources */,
 				7889F34325C4685C009C4C25 /* Credential.swift in Sources */,
@@ -269,6 +282,7 @@
 			files = (
 				7889F36A25C482AE009C4C25 /* AddCredsViewController.swift in Sources */,
 				7890576B25CC5C8700B2DEFD /* AES.swift in Sources */,
+				788BDCBD25CFFB8900117A19 /* CSVManager.swift in Sources */,
 				7889F36625C47DF0009C4C25 /* Credential.swift in Sources */,
 				7889F35825C47D59009C4C25 /* CredentialProviderViewController.swift in Sources */,
 			);

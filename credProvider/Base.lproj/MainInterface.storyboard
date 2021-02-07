@@ -36,6 +36,11 @@
                                                     <action selector="deleteAllButtonAction:" destination="Xki-Si-B7m" id="iVo-ST-1Yu"/>
                                                 </connections>
                                             </barButtonItem>
+                                            <barButtonItem systemItem="action" id="6sZ-hP-L40">
+                                                <connections>
+                                                    <action selector="shareCSVAction:" destination="Xki-Si-B7m" id="ndM-Pr-ZTV"/>
+                                                </connections>
+                                            </barButtonItem>
                                         </rightBarButtonItems>
                                     </navigationItem>
                                 </items>

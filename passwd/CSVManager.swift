@@ -5,7 +5,7 @@
 //  Created by Uday on 05/02/21.
 //
 
-import Foundation
+import UIKit
 
 ///CSV file manager
 class CSVManager{
@@ -58,7 +58,7 @@ class CSVManager{
         return row.components(separatedBy:delimiter)
     }
     
-    
+    ///pring data
     static func printData(file: String){
         convertCSV(file: file)
         var tableString = ""
@@ -80,14 +80,34 @@ class CSVManager{
     }
     
     
+    // MARK: CSV file creating
+    public static func creatCSV(creds: [Credential]) -> URL? {
+            let fileName = "Creds.csv"
+            let path = NSURL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent(fileName)
+            var csvText = "id,userName,password,domain\n"
+
+            for cred in creds {
+                let newLine = "\(cred.id),\(cred.userName),\(cred.password),\(cred.domain)\n"
+                csvText.append(newLine)
+            }
+            do {
+                try csvText.write(to: path!, atomically: true, encoding: String.Encoding.utf8)
+            } catch {
+                print("Failed to create file")
+                print("\(error)")
+            }
+            return path
+        }
+    
+    
     //MARK: Data reading and writing functions
-    public static func writeDataToFile(file:String)-> Bool{
+    public static func writeDataToFile()-> Bool{
         // check our data exists
         let data = "abcccccccc"
         //get the file path for the file in the bundle
         // if it doesnt exist, make it in the bundle
-        var fileName = file + ".txt"
-        if let filePath = Bundle.main.path(forResource: file, ofType: "txt"){
+        var fileName =   "test.txt"
+        if let filePath = Bundle.main.path(forResource: "test", ofType: "txt"){
             fileName = filePath
         } else {
             fileName = Bundle.main.bundlePath + fileName
@@ -101,5 +121,6 @@ class CSVManager{
             return false
         }
     }
-  
+    
+    
 }

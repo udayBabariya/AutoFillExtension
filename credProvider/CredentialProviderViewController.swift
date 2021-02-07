@@ -46,6 +46,22 @@ class CredentialProviderViewController: ASCredentialProviderViewController {
         passwords = PlistManager.load() ?? [Credential]()
         tableView.reloadData()
     }
+    
+    @IBAction func shareCSVAction(_ sender: UIButton){
+        if let allCreds = PlistManager.load(){
+            if let localUrl = CSVManager.creatCSV(creds: allCreds){
+                shareCsv(fileURL: localUrl)
+            }
+        }
+    }
+    
+    
+    ///ecport CSV file
+    func shareCsv(fileURL: URL){
+        let objectsToShare = [fileURL]
+        let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+        self.present(activityVC, animated: true, completion: nil)
+    }
 }
 
 
