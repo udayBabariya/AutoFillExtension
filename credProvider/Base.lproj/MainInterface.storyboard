@@ -43,7 +43,7 @@
                                             </barButtonItem>
                                             <barButtonItem systemItem="organize" id="vUJ-SN-PCu">
                                                 <connections>
-                                                    <action selector="pickCSV" destination="Xki-Si-B7m" id="Stw-in-plJ"/>
+                                                    <action selector="importCSVButtonAction" destination="Xki-Si-B7m" id="Stw-in-plJ"/>
                                                 </connections>
                                             </barButtonItem>
                                         </rightBarButtonItems>
