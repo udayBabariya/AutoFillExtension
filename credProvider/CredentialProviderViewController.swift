@@ -55,6 +55,22 @@ class CredentialProviderViewController: ASCredentialProviderViewController {
         passwords = PlistManager.load() ?? [Credential]()
         tableView.reloadData()
     }
+    
+    override func provideCredentialWithoutUserInteraction(for credentialIdentity: ASPasswordCredentialIdentity) {
+//        print("in provider: \(credentialIdentity.recordIdentifier!)")
+        let credToProvide = ASPasswordCredential(user: "udayyy", password: "paasssss")
+        self.extensionContext.completeRequest(withSelectedCredential: credToProvide, completionHandler: nil)
+        
+//        if let allCreds = PlistManager.load(), allCreds.count > 0{
+//            let filteredCreds = allCreds.filter {$0.domain == credentialIdentity.recordIdentifier!}
+//            if filteredCreds.count > 0, let firstCred = filteredCreds.first{
+//                let credToProvide = ASPasswordCredential(user: firstCred.userName, password: AES.decryptWithBase64(string: firstCred.password))
+//                self.extensionContext.completeRequest(withSelectedCredential: credToProvide, completionHandler: nil)
+//            }else{
+//                self.extensionContext.cancelRequest(withError: NSError(domain: ASExtensionErrorDomain, code:ASExtensionError.userInteractionRequired.rawValue))
+//            }
+//        }
+    }
 }
 
 

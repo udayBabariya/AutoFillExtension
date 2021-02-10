@@ -10,11 +10,12 @@ import MobileCoreServices
 
 class ViewController: UIViewController {
     
-    var isFirstTime = true
-
+    @IBOutlet weak var usernameTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        title = "login"
         let tap = UITapGestureRecognizer()
         tap.addTarget(self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tap)
@@ -33,5 +34,23 @@ class ViewController: UIViewController {
     
     @objc func dismissKeyboard(){
         view.endEditing(true)
+    }
+    
+    @IBAction func loginButtonAction(_ sendeer: UIButton){
+        print("login button action")
+        navigateToHomeScreen()
+    }
+    
+    func navigateToHomeScreen(){
+        guard let homeVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HomeViewController") as? HomeViewController else {return}
+        self.navigationController?.pushViewController(homeVC, animated: true)
+    }
+}
+
+class HomeViewController: UIViewController{
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        title = "Home"
     }
 }

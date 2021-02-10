@@ -129,29 +129,4 @@ class CSVManager{
             }
             return path
         }
-    
-    
-    //MARK: Data reading and writing functions
-    public static func writeDataToFile()-> Bool{
-        // check our data exists
-        let data = "abcccccccc"
-        //get the file path for the file in the bundle
-        // if it doesnt exist, make it in the bundle
-        var fileName =   "test.txt"
-        if let filePath = Bundle.main.path(forResource: "test", ofType: "txt"){
-            fileName = filePath
-        } else {
-            fileName = Bundle.main.bundlePath + fileName
-        }
-         
-        //write the file, return true if it works, false otherwise.
-        do{
-            try data.write(toFile: fileName, atomically: true, encoding: String.Encoding.utf8 )
-            return true
-        } catch{
-            return false
-        }
-    }
-    
-    
 }

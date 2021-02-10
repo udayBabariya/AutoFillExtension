@@ -43,7 +43,7 @@ class AddCredsViewController: UIViewController {
                 cred = Credential(id: cred.id, domain: cred.domain, userName: username, password: AES.encryptWithBase64(string: pass))
                 PlistManager.edit(cred: cred)
             }else{
-                let newCred = Credential(id: UUID().uuidString, domain: "", userName: username, password: AES.encryptWithBase64(string: pass))
+                let newCred = Credential(id: UUID().uuidString, domain: "com.uday.passwd", userName: username, password: AES.encryptWithBase64(string: pass))
                 PlistManager.write(cred: newCred)
             }
         }else{
