@@ -22,6 +22,7 @@
 		783A3CBF25D6F05A00873F37 /* PasswordList+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783A3CBE25D6F05A00873F37 /* PasswordList+TableView.swift */; };
 		783A3CC325D6F08200873F37 /* PasswordList+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783A3CC225D6F08200873F37 /* PasswordList+Navigation.swift */; };
 		783A3CC725D6F42C00873F37 /* PasswordList+ImprtExport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783A3CC625D6F42C00873F37 /* PasswordList+ImprtExport.swift */; };
+		783A3CCD25D6F5C000873F37 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783A3CCC25D6F5C000873F37 /* Helper.swift */; };
 		7858067225BD086A0097CD5E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7858067125BD086A0097CD5E /* AppDelegate.swift */; };
 		7858067425BD086A0097CD5E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7858067325BD086A0097CD5E /* SceneDelegate.swift */; };
 		7858067625BD086A0097CD5E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7858067525BD086A0097CD5E /* ViewController.swift */; };
@@ -86,6 +87,7 @@
 		783A3CBE25D6F05A00873F37 /* PasswordList+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PasswordList+TableView.swift"; sourceTree = "<group>"; };
 		783A3CC225D6F08200873F37 /* PasswordList+Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PasswordList+Navigation.swift"; sourceTree = "<group>"; };
 		783A3CC625D6F42C00873F37 /* PasswordList+ImprtExport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PasswordList+ImprtExport.swift"; sourceTree = "<group>"; };
+		783A3CCC25D6F5C000873F37 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		7858066E25BD086A0097CD5E /* passwd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = passwd.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7858067125BD086A0097CD5E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7858067325BD086A0097CD5E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -180,6 +182,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		783A3CCA25D6F5AA00873F37 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				783A3CCC25D6F5C000873F37 /* Helper.swift */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
 		7858066525BD086A0097CD5E = {
 			isa = PBXGroup;
 			children = (
@@ -202,6 +212,7 @@
 		7858067025BD086A0097CD5E /* passwd */ = {
 			isa = PBXGroup;
 			children = (
+				783A3CCA25D6F5AA00873F37 /* SupportingFiles */,
 				783A3C9C25D6D3E800873F37 /* PasswordDetail */,
 				7802EE0325D60BDB001CF80D /* AddPassword */,
 				7802EDF925D6076F001CF80D /* PasswordList */,
@@ -369,6 +380,7 @@
 				788BDCB825CFF63500117A19 /* UIApplication.swift in Sources */,
 				783A3C9E25D6D3FC00873F37 /* PasswordDetailViewController.swift in Sources */,
 				783A3CAE25D6E07700873F37 /* UITextField.swift in Sources */,
+				783A3CCD25D6F5C000873F37 /* Helper.swift in Sources */,
 				7858067625BD086A0097CD5E /* ViewController.swift in Sources */,
 				783A3CC725D6F42C00873F37 /* PasswordList+ImprtExport.swift in Sources */,
 				783A3CC325D6F08200873F37 /* PasswordList+Navigation.swift in Sources */,

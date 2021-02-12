@@ -26,7 +26,7 @@ extension PasswordListViewController: UIDocumentPickerDelegate {
                 for cred in creds{
                     if isCredAlredyExist(cred: cred) {continue}
                     PlistManager.write(cred: cred)
-//                    fetchPasswords_ReloadTV()
+                    fetchPasswords_ReloadTV()
                 }
             }
         }

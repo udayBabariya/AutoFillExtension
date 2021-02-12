@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol loginVCDelegate{
+    func login()
+}
+
 class LoginViewController: UIViewController {
     
     @IBOutlet weak var userNameTextField: UITextField!
@@ -18,6 +22,8 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var registerButton: UIButton!
 
+    var delegate: loginVCDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUp()
@@ -45,6 +51,8 @@ class LoginViewController: UIViewController {
     
     
     @IBAction func loginButtonAction(_ sender: UIButton){
+        Helper.setLoginState(login: true)
+        delegate?.login()
         self.dismiss(animated: true)
     }
     

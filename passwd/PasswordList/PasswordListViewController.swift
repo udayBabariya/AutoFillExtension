@@ -19,9 +19,17 @@ class PasswordListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        passwords = PlistManager.load() ?? [Credential]()
         passwordTableView.delegate = self
         passwordTableView.dataSource = self
+        checkForLoginSetData()
+    }
+    
+    internal func checkForLoginSetData(){
+        if Helper.isLogedIn(){
+            fetchPasswords_ReloadTV()
+        }else{
+            navigateToLogin()
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -39,6 +47,12 @@ class PasswordListViewController: UIViewController {
     
     @IBAction func importButtonAction(_ sender: UIButton){
         openDocumentPicker()
+    }
+    
+    ///fetch all password from plisrt file and reload tableview
+    internal func fetchPasswords_ReloadTV(){
+        passwords = PlistManager.load() ?? [Credential]()
+        passwordTableView.reloadData()
     }
 }
 

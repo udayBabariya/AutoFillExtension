@@ -22,4 +22,18 @@ extension PasswordListViewController{
         guard let passwordDetailVC = UIStoryboard(name: "PasswordDetail", bundle: nil).instantiateViewController(withIdentifier: "PasswordDetailViewController") as? PasswordDetailViewController else {return}
         self.navigationController?.pushViewController(passwordDetailVC, animated: true)
     }
+    
+    ///present login screen
+    func navigateToLogin(){
+        guard let loginVC = UIStoryboard(name: "Login", bundle: nil).instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController else {return}
+        loginVC.modalPresentationStyle = .fullScreen
+        loginVC.delegate = self
+        self.present(loginVC, animated: true)
+    }
+}
+
+extension PasswordListViewController: loginVCDelegate{
+    func login() {
+        checkForLoginSetData()
+    }
 }
