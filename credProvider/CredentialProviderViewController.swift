@@ -8,6 +8,7 @@
 import UIKit
 import AuthenticationServices
 import MobileCoreServices
+import os.log
 
 class CredentialProviderViewController: ASCredentialProviderViewController {
 
@@ -16,6 +17,8 @@ class CredentialProviderViewController: ASCredentialProviderViewController {
     var passwords = [Credential]()
      
     override func prepareCredentialList(for serviceIdentifiers: [ASCredentialServiceIdentifier]) {
+        NSLog("prepareCredentialList")
+        os_log("%{public}@", log: OSLog(subsystem: "com.uday.passwd", category: "myExtension"), type: OSLogType.debug, "prepareCredentialListSanket")
         passwords = PlistManager.load() ?? [Credential]()
         tableView.register(Cell.self, forCellReuseIdentifier: "cell")
         tableView.dataSource = self
@@ -23,17 +26,20 @@ class CredentialProviderViewController: ASCredentialProviderViewController {
     }
 
     @IBAction func cancel(_ sender: AnyObject?) {
+        print("cancel")
         self.extensionContext.cancelRequest(withError: NSError(domain: ASExtensionErrorDomain, code: ASExtensionError.userCanceled.rawValue))
     }
 
    
     @IBAction func addCredButtonAction(_ sender: UIButton){
+        NSLog("addButtonAction")
         guard let addCredVC = storyboard?.instantiateViewController(identifier: "AddCredsViewController") as? AddCredsViewController else {return}
         addCredVC.delegate = self
        present(addCredVC, animated: true)
     }
     
     @IBAction func deleteAllButtonAction(_ sender: UIButton){
+        print("deleteAll")
         PlistManager.removeAll()
         fetchPasswords_ReloadTV()
     }
@@ -57,6 +63,7 @@ class CredentialProviderViewController: ASCredentialProviderViewController {
     }
     
     override func provideCredentialWithoutUserInteraction(for credentialIdentity: ASPasswordCredentialIdentity) {
+        print("provideCredentialWithoutUserInteraction")
 //        print("in provider: \(credentialIdentity.recordIdentifier!)")
         let credToProvide = ASPasswordCredential(user: "udayyy", password: "paasssss")
         self.extensionContext.completeRequest(withSelectedCredential: credToProvide, completionHandler: nil)

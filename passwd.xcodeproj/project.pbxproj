@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7802EDF225D60098001CF80D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7802EDF125D60098001CF80D /* LoginViewController.swift */; };
+		7802EDF625D600B6001CF80D /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7802EDF525D600B6001CF80D /* Login.storyboard */; };
+		7802EDFB25D60792001CF80D /* PasswordListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7802EDFA25D60792001CF80D /* PasswordListViewController.swift */; };
+		7802EE0025D607B0001CF80D /* PasswordList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7802EDFF25D607B0001CF80D /* PasswordList.storyboard */; };
+		7802EE0525D60BEC001CF80D /* AddPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7802EE0425D60BEC001CF80D /* AddPasswordViewController.swift */; };
+		7802EE0925D60C02001CF80D /* AddPassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7802EE0825D60C02001CF80D /* AddPassword.storyboard */; };
 		7858067225BD086A0097CD5E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7858067125BD086A0097CD5E /* AppDelegate.swift */; };
 		7858067425BD086A0097CD5E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7858067325BD086A0097CD5E /* SceneDelegate.swift */; };
 		7858067625BD086A0097CD5E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7858067525BD086A0097CD5E /* ViewController.swift */; };
@@ -56,6 +62,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7802EDF125D60098001CF80D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		7802EDF525D600B6001CF80D /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		7802EDFA25D60792001CF80D /* PasswordListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordListViewController.swift; sourceTree = "<group>"; };
+		7802EDFF25D607B0001CF80D /* PasswordList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PasswordList.storyboard; sourceTree = "<group>"; };
+		7802EE0425D60BEC001CF80D /* AddPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPasswordViewController.swift; sourceTree = "<group>"; };
+		7802EE0825D60C02001CF80D /* AddPassword.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddPassword.storyboard; sourceTree = "<group>"; };
 		7858066E25BD086A0097CD5E /* passwd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = passwd.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7858067125BD086A0097CD5E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7858067325BD086A0097CD5E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +113,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7802EDEF25D60078001CF80D /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				7802EDF125D60098001CF80D /* LoginViewController.swift */,
+				7802EDF525D600B6001CF80D /* Login.storyboard */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		7802EDF925D6076F001CF80D /* PasswordList */ = {
+			isa = PBXGroup;
+			children = (
+				7802EDFA25D60792001CF80D /* PasswordListViewController.swift */,
+				7802EDFF25D607B0001CF80D /* PasswordList.storyboard */,
+			);
+			path = PasswordList;
+			sourceTree = "<group>";
+		};
+		7802EE0325D60BDB001CF80D /* AddPassword */ = {
+			isa = PBXGroup;
+			children = (
+				7802EE0425D60BEC001CF80D /* AddPasswordViewController.swift */,
+				7802EE0825D60C02001CF80D /* AddPassword.storyboard */,
+			);
+			path = AddPassword;
+			sourceTree = "<group>";
+		};
 		7858066525BD086A0097CD5E = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +162,9 @@
 		7858067025BD086A0097CD5E /* passwd */ = {
 			isa = PBXGroup;
 			children = (
+				7802EE0325D60BDB001CF80D /* AddPassword */,
+				7802EDF925D6076F001CF80D /* PasswordList */,
+				7802EDEF25D60078001CF80D /* Login */,
 				788BDCB625CFF62400117A19 /* Extension */,
 				785806A125BD09940097CD5E /* passwd.entitlements */,
 				7858067125BD086A0097CD5E /* AppDelegate.swift */,
@@ -253,7 +295,10 @@
 				7858067E25BD086B0097CD5E /* LaunchScreen.storyboard in Resources */,
 				7858067B25BD086B0097CD5E /* Assets.xcassets in Resources */,
 				78FC5B3F25CD89AB002F30BC /* test.txt in Resources */,
+				7802EDF625D600B6001CF80D /* Login.storyboard in Resources */,
 				7858067925BD086A0097CD5E /* Main.storyboard in Resources */,
+				7802EE0025D607B0001CF80D /* PasswordList.storyboard in Resources */,
+				7802EE0925D60C02001CF80D /* AddPassword.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,11 +317,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7802EDFB25D60792001CF80D /* PasswordListViewController.swift in Sources */,
 				78FC5B3B25CD887F002F30BC /* CSVManager.swift in Sources */,
 				788BDCB825CFF63500117A19 /* UIApplication.swift in Sources */,
 				7858067625BD086A0097CD5E /* ViewController.swift in Sources */,
 				7858067225BD086A0097CD5E /* AppDelegate.swift in Sources */,
+				7802EDF225D60098001CF80D /* LoginViewController.swift in Sources */,
 				7889F34325C4685C009C4C25 /* Credential.swift in Sources */,
+				7802EE0525D60BEC001CF80D /* AddPasswordViewController.swift in Sources */,
 				7858067425BD086A0097CD5E /* SceneDelegate.swift in Sources */,
 				7890576825CC5B0600B2DEFD /* AES.swift in Sources */,
 			);
