@@ -20,6 +20,12 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSDocumentsFolderUsageDescription</key>
+	<string>To fetch stored files</string>
+	<key>NSDownloadsFolderUsageDescription</key>
+	<string>te fetch stored files</string>
+	<key>NSFileProviderPresenceUsageDescription</key>
+	<string>To fetch stored files</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -34,7 +40,7 @@
 					<key>UISceneDelegateClassName</key>
 					<string>$(PRODUCT_MODULE_NAME).SceneDelegate</string>
 					<key>UISceneStoryboardFile</key>
-					<string>Main</string>
+					<string>PasswordList</string>
 				</dict>
 			</array>
 		</dict>
@@ -44,7 +50,7 @@
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
-	<string>Main</string>
+	<string>PasswordList</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
@@ -60,11 +66,5 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>NSDocumentsFolderUsageDescription</key>
-	<string>To fetch stored files</string>
-	<key>NSFileProviderPresenceUsageDescription</key>
-	<string>To fetch stored files</string>
-	<key>NSDownloadsFolderUsageDescription</key>
-	<string>te fetch stored files</string>
 </dict>
 </plist>
