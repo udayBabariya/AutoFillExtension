@@ -51,6 +51,16 @@ class LoginViewController: BaseViewController {
     
     
     @IBAction func loginButtonAction(_ sender: UIButton){
+        if userNameTextField.text == ""{
+            Helper.showAlert(head: "Oops!", message: "Please Enter UserName", vc: self)
+            return
+        }
+        
+        if passwordTextField.text == ""{
+            Helper.showAlert(head: "Oops!", message: "Please Enter Password", vc: self)
+            return
+        }
+        
         Helper.setLoginState(login: true)
         delegate?.login()
         self.dismiss(animated: true)

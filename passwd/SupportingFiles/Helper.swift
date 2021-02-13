@@ -5,7 +5,7 @@
 //  Created by Uday on 12/02/21.
 //
 
-import Foundation
+import UIKit
 
 class Helper{
     
@@ -17,5 +17,13 @@ class Helper{
     
     class func setLoginState(login: Bool){
         UserDefaults.standard.setValue(login, forKey: keyIsLoggedIn)
+    }
+    
+    
+    class func showAlert(head:String, message:String, vc: UIViewController ) {
+        
+        let alert = UIAlertController(title: head, message: message, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default))
+        vc.present(alert, animated: true)
     }
 }
