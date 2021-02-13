@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol addPasswordVCDelegate{
+    func credAdded()
+}
+
 class AddPasswordViewController: UIViewController {
     
     @IBOutlet weak var scrollView: UIScrollView!
@@ -18,6 +22,9 @@ class AddPasswordViewController: UIViewController {
     @IBOutlet weak var passwordTextFiled: UITextField!
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var showPasswordButton: UIButton!
+    
+    var delegate: addPasswordVCDelegate?
+    var selectedPlatform = Platforms.Facebook
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,48 +50,19 @@ class AddPasswordViewController: UIViewController {
     }
     
     @IBAction func saveButtonAction(_ sender: UIButton){
-        
+        saveButton.isUserInteractionEnabled = false
+        if let username = userNameTextField.text, let pass = passwordTextFiled.text{
+            let newCred = Credential(id: UUID().uuidString, domain: selectedPlatform.url, userName: username, password: AES.encryptWithBase64(string: pass),platform: selectedPlatform.rawValue)
+            PlistManager.write(cred: newCred)
+        }else{
+            print("username or password not found")
+        }
+        delegate?.credAdded()
+        self.navigationController?.popViewController(animated: true)
     }
     
     @IBAction func showPasswordButtonAction(_ sender: UIButton){
         
-    }
-    
-    
-    
-    func showAvaliableOptions(){
-        let actionSheet = UIAlertController(title: "Select Platform", message: "", preferredStyle: .actionSheet)
-        let facebookAction = UIAlertAction(title: "Facebook", style: .default) { (action) in
-            //facebook selected
-            self.selectedPlatformLabel.text = "Facebook"
-        }
-        let gmailAction = UIAlertAction(title: "Gmail", style: .default) { (action) in
-            //gmail selected
-            self.selectedPlatformLabel.text = "Gmail"
-        }
-        let instagramAction = UIAlertAction(title: "Instagram", style: .default) { (action) in
-            //instagram selected
-            self.selectedPlatformLabel.text = "Instagram"
-        }
-        let snapChatAction = UIAlertAction(title: "SnapChat", style: .default) { (action) in
-            //snapChat selected
-            self.selectedPlatformLabel.text = "SnapChat"
-        }
-        let linkedInAction = UIAlertAction(title: "LinkedIn", style: .default) { (action) in
-            //linkedIn selected
-            self.selectedPlatformLabel.text = "LinkedIn"
-        }
-        
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel){ action in }
-        
-        actionSheet.addAction(facebookAction)
-        actionSheet.addAction(gmailAction)
-        actionSheet.addAction(instagramAction)
-        actionSheet.addAction(snapChatAction)
-        actionSheet.addAction(linkedInAction)
-        actionSheet.addAction(cancelAction)
-        
-        self.present(actionSheet, animated: true)
-    }
+    }    
 
 }

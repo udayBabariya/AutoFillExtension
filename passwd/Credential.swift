@@ -14,6 +14,7 @@ struct Credential: Codable{
     var domain = ""
     var userName = ""
     var password = ""
+    var platform = ""
     
     var asDictionary : String {
         let mirror = Mirror(reflecting: self)
@@ -46,7 +47,7 @@ class PlistManager{
     /// create local storage file if needed
     static private func createPlistFileIfNeeded(){
         if !FileManager.default.fileExists(atPath: PlistManager.plistUrl.path){
-            let creds = [Credential(id: UUID().uuidString, domain: "", userName: "", password: "")]
+            let creds = [Credential(id: UUID().uuidString, domain: "", userName: "", password: "",platform: "")]
             
             if let dataToWrite = try? PropertyListEncoder().encode(creds){
                 try? dataToWrite.write(to: PlistManager.plistUrl)

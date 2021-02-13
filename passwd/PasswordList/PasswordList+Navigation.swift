@@ -14,6 +14,7 @@ extension PasswordListViewController{
     ///navigate to add password screem
     func navigateToAddNewPassword(){
         guard let addPasswordVC = UIStoryboard(name: "AddPassword", bundle: nil).instantiateViewController(withIdentifier: "AddPasswordViewController") as? AddPasswordViewController else {return}
+        addPasswordVC.delegate = self
         self.navigationController?.pushViewController(addPasswordVC, animated: true)
     }
     
@@ -34,6 +35,13 @@ extension PasswordListViewController{
 
 extension PasswordListViewController: loginVCDelegate{
     func login() {
+        checkForLoginSetData()
+    }
+}
+
+
+extension PasswordListViewController: addPasswordVCDelegate{
+    func credAdded() {
         checkForLoginSetData()
     }
 }
