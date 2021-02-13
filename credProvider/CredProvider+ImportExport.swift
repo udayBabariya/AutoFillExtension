@@ -9,7 +9,7 @@ import UIKit
 import MobileCoreServices
 
 //MARK:- document picker delegate
-extension CredentialProviderViewController: UIDocumentPickerDelegate {
+extension CredentialProviderViewController2: UIDocumentPickerDelegate {
     
     func openDocumentPicker(){
         let documentPicker = UIDocumentPickerViewController(documentTypes: [String(kUTTypeText)], in: .import)

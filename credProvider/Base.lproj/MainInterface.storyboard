@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Xki-Si-B7m">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZLg-cz-VlU">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -9,9 +9,59 @@
     </dependencies>
     <scenes>
         <!--Credential Provider View Controller-->
+        <scene sceneID="u9d-Ij-SSt">
+            <objects>
+                <viewController id="ZLg-cz-VlU" customClass="CredentialProviderViewController" customModule="credProvider" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Dsc-CR-HVB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vV8-PS-V8O">
+                                <rect key="frame" x="0.0" y="50" width="375" height="617"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ha-0D-baB">
+                                <rect key="frame" x="125.5" y="10" width="124" height="33"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="White">
+                                        <attributes>
+                                            <color key="NSColor" red="0.99519230769230771" green="0.99038461538461542" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" size="28" name="HelveticaNeue"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="HaX">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="0.3887429299004308" blue="0.33484645818943304" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" size="28" name="HelveticaNeue"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="od4-wJ-HCM"/>
+                        <color key="backgroundColor" red="0.098039209840000002" green="0.1294117719" blue="0.1764705926" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="od4-wJ-HCM" firstAttribute="trailing" secondItem="vV8-PS-V8O" secondAttribute="trailing" id="074-BA-TfX"/>
+                            <constraint firstItem="0Ha-0D-baB" firstAttribute="top" secondItem="od4-wJ-HCM" secondAttribute="top" constant="10" id="LkO-Bs-tSV"/>
+                            <constraint firstItem="0Ha-0D-baB" firstAttribute="centerX" secondItem="Dsc-CR-HVB" secondAttribute="centerX" id="civ-B1-oR3"/>
+                            <constraint firstItem="od4-wJ-HCM" firstAttribute="bottom" secondItem="vV8-PS-V8O" secondAttribute="bottom" id="nk2-7c-C0C"/>
+                            <constraint firstItem="vV8-PS-V8O" firstAttribute="leading" secondItem="od4-wJ-HCM" secondAttribute="leading" id="ntA-Zl-zNj"/>
+                            <constraint firstItem="vV8-PS-V8O" firstAttribute="top" secondItem="od4-wJ-HCM" secondAttribute="top" constant="50" id="sZI-aI-bHW"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="vV8-PS-V8O" id="Sg6-5t-qiQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xoo-Cu-p1i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-566" y="59"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="Uma-9u-xWV">
             <objects>
-                <viewController id="Xki-Si-B7m" customClass="CredentialProviderViewController" customModule="credProvider" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Xki-Si-B7m" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BuU-Ak-iZz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -73,7 +123,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RwB-HB-TSk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="106" y="90"/>
+            <point key="canvasLocation" x="108" y="87"/>
         </scene>
         <!--Add Creds View Controller-->
         <scene sceneID="qpT-YN-Vz1">

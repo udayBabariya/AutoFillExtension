@@ -9,7 +9,7 @@ import UIKit
 import AuthenticationServices
 
 //MARK: UITableView datasource, delegate
-extension CredentialProviderViewController: UITableViewDelegate, UITableViewDataSource{
+extension CredentialProviderViewController2: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return passwords.count
     }

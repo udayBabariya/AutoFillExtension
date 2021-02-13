@@ -54,7 +54,7 @@
 		785806A225BD09940097CD5E /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7858068E25BD09150097CD5E /* AuthenticationServices.framework */; };
 		7889F34325C4685C009C4C25 /* Credential.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7889F34225C4685C009C4C25 /* Credential.swift */; };
 		7889F35525C47D59009C4C25 /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7858068E25BD09150097CD5E /* AuthenticationServices.framework */; };
-		7889F35825C47D59009C4C25 /* CredentialProviderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7889F35725C47D59009C4C25 /* CredentialProviderViewController.swift */; };
+		7889F35825C47D59009C4C25 /* CredentialProviderViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7889F35725C47D59009C4C25 /* CredentialProviderViewController2.swift */; };
 		7889F35B25C47D59009C4C25 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7889F35925C47D59009C4C25 /* MainInterface.storyboard */; };
 		7889F36025C47D59009C4C25 /* credProvider.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 7889F35425C47D59009C4C25 /* credProvider.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		7889F36625C47DF0009C4C25 /* Credential.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7889F34225C4685C009C4C25 /* Credential.swift */; };
@@ -65,6 +65,7 @@
 		788BDCD325D0444500117A19 /* CredProvider+TV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788BDCD225D0444500117A19 /* CredProvider+TV.swift */; };
 		7890576825CC5B0600B2DEFD /* AES.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7890576725CC5B0600B2DEFD /* AES.swift */; };
 		7890576B25CC5C8700B2DEFD /* AES.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7890576725CC5B0600B2DEFD /* AES.swift */; };
+		78B1379B25D82BA100DFB721 /* CredentialProviderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B1379A25D82BA100DFB721 /* CredentialProviderViewController.swift */; };
 		78FC5B3B25CD887F002F30BC /* CSVManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FC5B3A25CD887F002F30BC /* CSVManager.swift */; };
 		78FC5B3F25CD89AB002F30BC /* test.txt in Resources */ = {isa = PBXBuildFile; fileRef = 78FC5B3E25CD89AB002F30BC /* test.txt */; };
 /* End PBXBuildFile section */
@@ -125,7 +126,7 @@
 		785806A125BD09940097CD5E /* passwd.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = passwd.entitlements; sourceTree = "<group>"; };
 		7889F34225C4685C009C4C25 /* Credential.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credential.swift; sourceTree = "<group>"; };
 		7889F35425C47D59009C4C25 /* credProvider.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = credProvider.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		7889F35725C47D59009C4C25 /* CredentialProviderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialProviderViewController.swift; sourceTree = "<group>"; };
+		7889F35725C47D59009C4C25 /* CredentialProviderViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialProviderViewController2.swift; sourceTree = "<group>"; };
 		7889F35A25C47D59009C4C25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		7889F35C25C47D59009C4C25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7889F35D25C47D59009C4C25 /* credProvider.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = credProvider.entitlements; sourceTree = "<group>"; };
@@ -134,6 +135,7 @@
 		788BDCCE25D0442E00117A19 /* CredProvider+ImportExport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CredProvider+ImportExport.swift"; sourceTree = "<group>"; };
 		788BDCD225D0444500117A19 /* CredProvider+TV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CredProvider+TV.swift"; sourceTree = "<group>"; };
 		7890576725CC5B0600B2DEFD /* AES.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AES.swift; sourceTree = "<group>"; };
+		78B1379A25D82BA100DFB721 /* CredentialProviderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialProviderViewController.swift; sourceTree = "<group>"; };
 		78FC5B3A25CD887F002F30BC /* CSVManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVManager.swift; sourceTree = "<group>"; };
 		78FC5B3E25CD89AB002F30BC /* test.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -281,13 +283,14 @@
 		7889F35625C47D59009C4C25 /* credProvider */ = {
 			isa = PBXGroup;
 			children = (
-				7889F35725C47D59009C4C25 /* CredentialProviderViewController.swift */,
+				7889F35725C47D59009C4C25 /* CredentialProviderViewController2.swift */,
 				788BDCD225D0444500117A19 /* CredProvider+TV.swift */,
 				788BDCCE25D0442E00117A19 /* CredProvider+ImportExport.swift */,
 				7889F36925C482AE009C4C25 /* AddCredsViewController.swift */,
 				7889F35925C47D59009C4C25 /* MainInterface.storyboard */,
 				7889F35C25C47D59009C4C25 /* Info.plist */,
 				7889F35D25C47D59009C4C25 /* credProvider.entitlements */,
+				78B1379A25D82BA100DFB721 /* CredentialProviderViewController.swift */,
 			);
 			path = credProvider;
 			sourceTree = "<group>";
@@ -443,6 +446,7 @@
 			files = (
 				783A3CF725D8099B00873F37 /* PasswordListViewController.swift in Sources */,
 				7889F36A25C482AE009C4C25 /* AddCredsViewController.swift in Sources */,
+				78B1379B25D82BA100DFB721 /* CredentialProviderViewController.swift in Sources */,
 				783A3D0025D80A4400873F37 /* UITextField.swift in Sources */,
 				783A3CF925D8099B00873F37 /* PasswordList+ImprtExport.swift in Sources */,
 				783A3CEA25D8097A00873F37 /* AddPasswordViewController.swift in Sources */,
@@ -460,7 +464,7 @@
 				783A3CF825D8099B00873F37 /* PasswordList+TableView.swift in Sources */,
 				788BDCD325D0444500117A19 /* CredProvider+TV.swift in Sources */,
 				783A3CEB25D8097A00873F37 /* AddPassword+Platform.swift in Sources */,
-				7889F35825C47D59009C4C25 /* CredentialProviderViewController.swift in Sources */,
+				7889F35825C47D59009C4C25 /* CredentialProviderViewController2.swift in Sources */,
 				783A3CF225D8099700873F37 /* PasswordListTableViewCell.swift in Sources */,
 				783A3CE125D8097200873F37 /* Helper.swift in Sources */,
 			);
