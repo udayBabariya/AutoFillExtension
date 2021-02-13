@@ -34,6 +34,12 @@ class AddPasswordViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.isHidden = true
+        registerForKeyboardNotifications()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        deregisterFromKeyboardNotifications()
     }
     
     func setUp(){
@@ -74,4 +80,39 @@ class AddPasswordViewController: BaseViewController {
         
     }    
 
+}
+
+//MARK:- keyboard
+extension AddPasswordViewController{
+    
+    func registerForKeyboardNotifications(){
+        //Adding notifies on keyboard appearing
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWasShown(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillBeHidden(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    func deregisterFromKeyboardNotifications(){
+        //Removing notifies on keyboard appearing
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    
+    
+    @objc func keyboardWasShown(_ notification: Foundation.Notification){
+        //Need to calculate keyboard exact size due to Apple suggestions
+        let info : NSDictionary = (notification as NSNotification).userInfo! as NSDictionary
+        let keyboardSize = (info[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue.size
+        UIView.animate(withDuration: 0.3) {
+            self.scrollView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: keyboardSize!.height, right: 0)
+            self.view.layoutIfNeeded()
+        }
+    }
+    
+    @objc func keyboardWillBeHidden(_ notification: Foundation.Notification){
+        UIView.animate(withDuration: 0.3) {
+            self.scrollView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 30, right: 0)
+            self.view.layoutIfNeeded()
+        }
+    }
 }
