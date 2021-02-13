@@ -22,6 +22,7 @@ class PasswordDetailViewController: BaseViewController {
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var deleteButton: UIButton!
+    @IBOutlet weak var updateButton: UIButton!
     @IBOutlet weak var showPasswordButton: UIButton!
     
     var selectedPassword = Credential()
@@ -38,6 +39,8 @@ class PasswordDetailViewController: BaseViewController {
     }
     
     func setUp(){
+        updateButton.layer.cornerRadius = updateButton.frame.height/2
+        deleteButton.layer.cornerRadius = deleteButton.frame.height/2
         serviceTypeLabel.text = selectedPassword.platform
         urlLable.text = selectedPassword.domain
         userNameTextField.text = selectedPassword.userName
@@ -69,6 +72,16 @@ class PasswordDetailViewController: BaseViewController {
         alert.addAction(noAction)
         self.present(alert, animated: true)
        
+    }
+    
+    @IBAction func updateButtonAction(_ sender: UIButton) {
+        
+        selectedPassword.userName = userNameTextField.text ?? ""
+        selectedPassword.password = AES.encryptWithBase64(string: passwordTextField.text ?? "")
+        
+        PlistManager.edit(cred: selectedPassword)
+        delegate?.modified()
+        navigationController?.popViewController(animated: true)
     }
     
 }

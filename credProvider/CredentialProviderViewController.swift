@@ -23,6 +23,7 @@ class CredentialProviderViewController: ASCredentialProviderViewController {
         tableView.register(Cell.self, forCellReuseIdentifier: "cell")
         tableView.dataSource = self
         tableView.delegate = self
+        
     }
 
     @IBAction func cancel(_ sender: AnyObject?) {
