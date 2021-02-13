@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PasswordListViewController: UIViewController {
+class PasswordListViewController: BaseViewController {
     
     @IBOutlet weak var menuButton: UIButton!
     @IBOutlet weak var titleLabel: UILabel!

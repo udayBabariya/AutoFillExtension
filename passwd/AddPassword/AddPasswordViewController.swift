@@ -11,7 +11,7 @@ protocol addPasswordVCDelegate{
     func credAdded()
 }
 
-class AddPasswordViewController: UIViewController {
+class AddPasswordViewController: BaseViewController {
     
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var backButton: UIButton!
@@ -28,7 +28,7 @@ class AddPasswordViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setUp()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -38,7 +38,6 @@ class AddPasswordViewController: UIViewController {
     
     func setUp(){
         saveButton.layer.cornerRadius = saveButton.frame.height/2
-        
     }
     
     @IBAction func backButtonAction(_ sender: UIButton){

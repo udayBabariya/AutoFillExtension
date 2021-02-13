@@ -25,6 +25,7 @@
 		783A3CCD25D6F5C000873F37 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783A3CCC25D6F5C000873F37 /* Helper.swift */; };
 		783A3CD325D758C000873F37 /* AddPassword+Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783A3CD225D758C000873F37 /* AddPassword+Platform.swift */; };
 		783A3CD825D759DD00873F37 /* PlatformOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783A3CD725D759DD00873F37 /* PlatformOptions.swift */; };
+		783A3CDE25D777FE00873F37 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783A3CDD25D777FE00873F37 /* BaseViewController.swift */; };
 		7858067225BD086A0097CD5E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7858067125BD086A0097CD5E /* AppDelegate.swift */; };
 		7858067425BD086A0097CD5E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7858067325BD086A0097CD5E /* SceneDelegate.swift */; };
 		7858067625BD086A0097CD5E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7858067525BD086A0097CD5E /* ViewController.swift */; };
@@ -92,6 +93,7 @@
 		783A3CCC25D6F5C000873F37 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		783A3CD225D758C000873F37 /* AddPassword+Platform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddPassword+Platform.swift"; sourceTree = "<group>"; };
 		783A3CD725D759DD00873F37 /* PlatformOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlatformOptions.swift; sourceTree = "<group>"; };
+		783A3CDD25D777FE00873F37 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		7858066E25BD086A0097CD5E /* passwd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = passwd.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7858067125BD086A0097CD5E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7858067325BD086A0097CD5E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				783A3CCC25D6F5C000873F37 /* Helper.swift */,
+				783A3CDD25D777FE00873F37 /* BaseViewController.swift */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -399,6 +402,7 @@
 				7858067625BD086A0097CD5E /* ViewController.swift in Sources */,
 				783A3CC725D6F42C00873F37 /* PasswordList+ImprtExport.swift in Sources */,
 				783A3CC325D6F08200873F37 /* PasswordList+Navigation.swift in Sources */,
+				783A3CDE25D777FE00873F37 /* BaseViewController.swift in Sources */,
 				783A3CD825D759DD00873F37 /* PlatformOptions.swift in Sources */,
 				783A3CBB25D6EE0300873F37 /* PasswordListAddNewPasswordTableViewCell.swift in Sources */,
 				7858067225BD086A0097CD5E /* AppDelegate.swift in Sources */,

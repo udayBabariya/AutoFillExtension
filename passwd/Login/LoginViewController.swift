@@ -11,7 +11,7 @@ protocol loginVCDelegate{
     func login()
 }
 
-class LoginViewController: UIViewController {
+class LoginViewController: BaseViewController {
     
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
