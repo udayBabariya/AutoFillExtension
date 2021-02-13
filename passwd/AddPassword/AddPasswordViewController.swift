@@ -49,6 +49,16 @@ class AddPasswordViewController: BaseViewController {
     }
     
     @IBAction func saveButtonAction(_ sender: UIButton){
+        if userNameTextField.text == "" {
+            Helper.showAlert(head: "Oops!", message: "please enter username", vc: self)
+            return
+        }
+        
+        if passwordTextFiled.text == "" {
+            Helper.showAlert(head: "Oops!", message: "please enter password", vc: self)
+            return
+        }
+        
         saveButton.isUserInteractionEnabled = false
         if let username = userNameTextField.text, let pass = passwordTextFiled.text{
             let newCred = Credential(id: UUID().uuidString, domain: selectedPlatform.url, userName: username, password: AES.encryptWithBase64(string: pass),platform: selectedPlatform.rawValue)

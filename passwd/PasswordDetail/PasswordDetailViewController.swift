@@ -76,6 +76,17 @@ class PasswordDetailViewController: BaseViewController {
     
     @IBAction func updateButtonAction(_ sender: UIButton) {
         
+        if userNameTextField.text == "" {
+            Helper.showAlert(head: "Oops!", message: "please enter username", vc: self)
+            return
+        }
+        
+        if passwordTextField.text == "" {
+            Helper.showAlert(head: "Oops!", message: "please enter password", vc: self)
+            return
+        }
+        
+        
         selectedPassword.userName = userNameTextField.text ?? ""
         selectedPassword.password = AES.encryptWithBase64(string: passwordTextField.text ?? "")
         

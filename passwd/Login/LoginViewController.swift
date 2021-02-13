@@ -76,7 +76,3 @@ class LoginViewController: BaseViewController {
 
 }
 
-//MARK: - navigation
-extension LoginViewController{
-    
-}
