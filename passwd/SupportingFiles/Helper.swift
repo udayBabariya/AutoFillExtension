@@ -28,15 +28,24 @@ class Helper{
     }
 }
 
+class StringConstant{
+    
+    static let defaultUser = ""//"liteuser1"
+    static let defaultPass = ""//"whitehax123"
+}
+
 ///right side logo of url - by default show key
 ///custom platform + blank url
 ///edit password - url + platform editable
 ///show password button
 ///after import platform missing
 ///logout button on top right corner
-///liteuser1 - whitehax123 default pass
 
 //DONE
 ///home top bar - add logo
 ///SplashScreen
 ///APP iCON
+///home screen logo
+///logout button + flow
+///liteuser1 - whitehax123 default pass
+

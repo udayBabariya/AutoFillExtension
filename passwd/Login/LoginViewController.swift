@@ -61,6 +61,14 @@ class LoginViewController: BaseViewController {
             return
         }
         
+        ///check for default password
+        if userNameTextField.text != StringConstant.defaultUser ||
+            passwordTextField.text != StringConstant.defaultPass{
+            Helper.showAlert(head: "Oops!", message: "Username or password invalid!", vc: self)
+            return
+        }
+
+        
         Helper.setLoginState(login: true)
         delegate?.login()
         self.dismiss(animated: true)

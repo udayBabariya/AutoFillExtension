@@ -28,6 +28,8 @@ class PasswordListViewController: BaseViewController {
         if Helper.isLogedIn(){
             fetchPasswords_ReloadTV()
         }else{
+            self.passwords.removeAll()
+            passwordTableView.reloadData()
             navigateToLogin()
         }
     }
@@ -43,6 +45,23 @@ class PasswordListViewController: BaseViewController {
                 shareCsv(fileURL: localUrl)
             }
         }
+    }
+    
+    @IBAction func logoutButtonAcion(_ sender: UIButton){
+       
+        
+        let alert = UIAlertController(title: "Logout", message: "Are You Sure?", preferredStyle: .alert)
+        
+        let yesAction = UIAlertAction(title: "Yes", style: .destructive) { (_) in
+            Helper.setLoginState(login: false)
+            self.checkForLoginSetData()
+        }
+        
+        let noAction = UIAlertAction(title: "No", style: .cancel) { (_) in
+        }
+        alert.addAction(yesAction)
+        alert.addAction(noAction)
+        self.present(alert, animated: true)
     }
     
     @IBAction func importButtonAction(_ sender: UIButton){
