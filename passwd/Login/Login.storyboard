@@ -130,7 +130,7 @@
                                                     <constraint firstAttribute="bottom" secondItem="zPP-Yy-anf" secondAttribute="bottom" id="zPa-cY-tmn"/>
                                                 </constraints>
                                             </view>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HZA-Hd-IXx">
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HZA-Hd-IXx">
                                                 <rect key="frame" x="146" y="430.5" width="122" height="30"/>
                                                 <state key="normal" title="Forget Password?">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

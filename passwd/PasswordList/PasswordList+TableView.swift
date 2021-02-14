@@ -27,6 +27,7 @@ extension PasswordListViewController: UITableViewDelegate, UITableViewDataSource
             guard let passwordCell = tableView.dequeueReusableCell(withIdentifier: "PasswordListTableViewCell", for: indexPath) as? PasswordListTableViewCell else {return UITableViewCell()}
             let tempPassword = passwords[indexPath.row]
             passwordCell.titleLabel.text = tempPassword.userName
+            passwordCell.setPlatformImage(platform: tempPassword.platform)
             passwordCell.cellClicked = { [weak self] in
                 self?.navigateToPasswordDetail(cred: tempPassword)
             }

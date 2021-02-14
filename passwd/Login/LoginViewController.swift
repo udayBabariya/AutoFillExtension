@@ -33,12 +33,14 @@ class LoginViewController: BaseViewController {
         userNameTextField.layer.cornerRadius = userNameTextField.frame.height/2
         userNameTextField.layer.borderWidth = 0.8
         userNameTextField.layer.borderColor = UIColor.appBlue.cgColor
-        userNameTextField.addLeftImage(image: "")
+//        userNameTextField.addLeftImage(image: "")
+        userNameTextField.setLeftPaddingPoints(30)
         
         passwordTextField.layer.cornerRadius = passwordTextField.frame.height/2
         passwordTextField.layer.borderWidth = 0.8
         passwordTextField.layer.borderColor = UIColor.appBlue.cgColor
-        passwordTextField.addLeftImage(image: "")
+//        passwordTextField.addLeftImage(image: "")
+        passwordTextField.setLeftPaddingPoints(30)
         passwordTextField.setRightPaddingPoints(30)
         
         
@@ -51,22 +53,22 @@ class LoginViewController: BaseViewController {
     
     
     @IBAction func loginButtonAction(_ sender: UIButton){
-        if userNameTextField.text == ""{
-            Helper.showAlert(head: "Oops!", message: "Please Enter UserName", vc: self)
-            return
-        }
-        
-        if passwordTextField.text == ""{
-            Helper.showAlert(head: "Oops!", message: "Please Enter Password", vc: self)
-            return
-        }
-        
-        ///check for default password
-        if userNameTextField.text != StringConstant.defaultUser ||
-            passwordTextField.text != StringConstant.defaultPass{
-            Helper.showAlert(head: "Oops!", message: "Username or password invalid!", vc: self)
-            return
-        }
+//        if userNameTextField.text == ""{
+//            Helper.showAlert(head: "Oops!", message: "Please Enter UserName", vc: self)
+//            return
+//        }
+//        
+//        if passwordTextField.text == ""{
+//            Helper.showAlert(head: "Oops!", message: "Please Enter Password", vc: self)
+//            return
+//        }
+//        
+//        ///check for default password
+//        if userNameTextField.text != StringConstant.defaultUser ||
+//            passwordTextField.text != StringConstant.defaultPass{
+//            Helper.showAlert(head: "Oops!", message: "Username or password invalid!", vc: self)
+//            return
+//        }
 
         
         Helper.setLoginState(login: true)
