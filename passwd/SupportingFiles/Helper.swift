@@ -27,3 +27,16 @@ class Helper{
         vc.present(alert, animated: true)
     }
 }
+
+///right side logo of url - by default show key
+///custom platform + blank url
+///edit password - url + platform editable
+///show password button
+///after import platform missing
+///logout button on top right corner
+///liteuser1 - whitehax123 default pass
+
+//DONE
+///home top bar - add logo
+///SplashScreen
+///APP iCON
