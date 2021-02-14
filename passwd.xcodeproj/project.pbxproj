@@ -67,6 +67,7 @@
 		7890576B25CC5C8700B2DEFD /* AES.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7890576725CC5B0600B2DEFD /* AES.swift */; };
 		78B1379B25D82BA100DFB721 /* CredentialProviderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B1379A25D82BA100DFB721 /* CredentialProviderViewController.swift */; };
 		78B137E025D8AEBC00DFB721 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7858067A25BD086B0097CD5E /* Assets.xcassets */; };
+		78B137E425D8AF4C00DFB721 /* PasswordListTableViewCellForExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B137E325D8AF4C00DFB721 /* PasswordListTableViewCellForExtension.swift */; };
 		78FC5B3B25CD887F002F30BC /* CSVManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FC5B3A25CD887F002F30BC /* CSVManager.swift */; };
 		78FC5B3F25CD89AB002F30BC /* test.txt in Resources */ = {isa = PBXBuildFile; fileRef = 78FC5B3E25CD89AB002F30BC /* test.txt */; };
 /* End PBXBuildFile section */
@@ -137,6 +138,7 @@
 		788BDCD225D0444500117A19 /* CredProvider+TV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CredProvider+TV.swift"; sourceTree = "<group>"; };
 		7890576725CC5B0600B2DEFD /* AES.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AES.swift; sourceTree = "<group>"; };
 		78B1379A25D82BA100DFB721 /* CredentialProviderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialProviderViewController.swift; sourceTree = "<group>"; };
+		78B137E325D8AF4C00DFB721 /* PasswordListTableViewCellForExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordListTableViewCellForExtension.swift; sourceTree = "<group>"; };
 		78FC5B3A25CD887F002F30BC /* CSVManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVManager.swift; sourceTree = "<group>"; };
 		78FC5B3E25CD89AB002F30BC /* test.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -292,6 +294,7 @@
 				7889F35C25C47D59009C4C25 /* Info.plist */,
 				7889F35D25C47D59009C4C25 /* credProvider.entitlements */,
 				78B1379A25D82BA100DFB721 /* CredentialProviderViewController.swift */,
+				78B137E325D8AF4C00DFB721 /* PasswordListTableViewCellForExtension.swift */,
 			);
 			path = credProvider;
 			sourceTree = "<group>";
@@ -450,6 +453,7 @@
 				7889F36A25C482AE009C4C25 /* AddCredsViewController.swift in Sources */,
 				78B1379B25D82BA100DFB721 /* CredentialProviderViewController.swift in Sources */,
 				783A3D0025D80A4400873F37 /* UITextField.swift in Sources */,
+				78B137E425D8AF4C00DFB721 /* PasswordListTableViewCellForExtension.swift in Sources */,
 				783A3CF925D8099B00873F37 /* PasswordList+ImprtExport.swift in Sources */,
 				783A3CEA25D8097A00873F37 /* AddPasswordViewController.swift in Sources */,
 				783A3CF625D8099B00873F37 /* PasswordList+Navigation.swift in Sources */,

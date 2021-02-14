@@ -37,13 +37,12 @@ extension CredentialProviderViewController: UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? Cell else {return UITableViewCell()}
-        let cred = passwords[indexPath.row]
-        cell.textLabel?.text = cred.userName
-        cell.detailTextLabel?.text = cred.password
-        cell.textLabel?.textColor = .white
-        cell.backgroundColor = .clear
-        return cell
+        
+        guard let passwordCell = tableView.dequeueReusableCell(withIdentifier: "PasswordListTableViewCellForExtension", for: indexPath) as? PasswordListTableViewCellForExtension else {return UITableViewCell()}
+        let tempPassword = passwords[indexPath.row]
+        passwordCell.titleLabel.text = tempPassword.userName
+        passwordCell.setPlatformImage(platform: tempPassword.platform)
+        return passwordCell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
