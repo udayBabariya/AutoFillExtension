@@ -102,7 +102,10 @@ class CSVManager{
                 if fieldName.lowercased().contains("domain"){
                     cred.domain = field
                 }
-                if index == 3 {
+                if fieldName.lowercased().contains("platform"){
+                    cred.platform = field
+                }
+                if index == 4 {
                     creds.append(cred)
                 }
             }
@@ -115,10 +118,10 @@ class CSVManager{
     public static func creatCSV(creds: [Credential]) -> URL? {
             let fileName = "Creds.csv"
             let path = NSURL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent(fileName)
-            var csvText = "id,userName,password,domain\n"
+            var csvText = "id,userName,password,domain,platform\n"
 
             for cred in creds {
-                let newLine = "\(cred.id),\(cred.userName),\(cred.password),\(cred.domain)\n"
+                let newLine = "\(cred.id),\(cred.userName),\(cred.password),\(cred.domain),\(cred.platform)\n"
                 csvText.append(newLine)
             }
             do {
