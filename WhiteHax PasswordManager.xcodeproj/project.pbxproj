@@ -118,7 +118,7 @@
 		783A3CD225D758C000873F37 /* AddPassword+Platform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddPassword+Platform.swift"; sourceTree = "<group>"; };
 		783A3CD725D759DD00873F37 /* PlatformOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlatformOptions.swift; sourceTree = "<group>"; };
 		783A3CDD25D777FE00873F37 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		7858066E25BD086A0097CD5E /* passwd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = passwd.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7858066E25BD086A0097CD5E /* WhiteHax PasswordManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WhiteHax PasswordManager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7858067125BD086A0097CD5E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7858067325BD086A0097CD5E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		7858067525BD086A0097CD5E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -247,7 +247,7 @@
 		7858066F25BD086A0097CD5E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7858066E25BD086A0097CD5E /* passwd.app */,
+				7858066E25BD086A0097CD5E /* WhiteHax PasswordManager.app */,
 				7889F35425C47D59009C4C25 /* credProvider.appex */,
 			);
 			name = Products;
@@ -316,9 +316,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		7858066D25BD086A0097CD5E /* passwd */ = {
+		7858066D25BD086A0097CD5E /* WhiteHax PasswordManager */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7858068225BD086B0097CD5E /* Build configuration list for PBXNativeTarget "passwd" */;
+			buildConfigurationList = 7858068225BD086B0097CD5E /* Build configuration list for PBXNativeTarget "WhiteHax PasswordManager" */;
 			buildPhases = (
 				7858066A25BD086A0097CD5E /* Sources */,
 				7858066B25BD086A0097CD5E /* Frameworks */,
@@ -330,9 +330,9 @@
 			dependencies = (
 				7889F35F25C47D59009C4C25 /* PBXTargetDependency */,
 			);
-			name = passwd;
+			name = "WhiteHax PasswordManager";
 			productName = passwd;
-			productReference = 7858066E25BD086A0097CD5E /* passwd.app */;
+			productReference = 7858066E25BD086A0097CD5E /* WhiteHax PasswordManager.app */;
 			productType = "com.apple.product-type.application";
 		};
 		7889F35325C47D59009C4C25 /* credProvider */ = {
@@ -369,7 +369,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 7858066925BD086A0097CD5E /* Build configuration list for PBXProject "passwd" */;
+			buildConfigurationList = 7858066925BD086A0097CD5E /* Build configuration list for PBXProject "WhiteHax PasswordManager" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -382,8 +382,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7858066D25BD086A0097CD5E /* passwd */,
 				7889F35325C47D59009C4C25 /* credProvider */,
+				7858066D25BD086A0097CD5E /* WhiteHax PasswordManager */,
 			);
 		};
 /* End PBXProject section */
@@ -651,7 +651,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.uday.passwd;
+				PRODUCT_BUNDLE_IDENTIFIER = com.whitehax.passwordManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -673,7 +673,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.uday.passwd;
+				PRODUCT_BUNDLE_IDENTIFIER = com.whitehax.passwordManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -687,13 +687,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GU6TNC55T8;
 				INFOPLIST_FILE = credProvider/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.uday.passwd.credProvider;
+				PRODUCT_BUNDLE_IDENTIFIER = com.whitehax.passwordManager.creds;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -708,13 +708,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GU6TNC55T8;
 				INFOPLIST_FILE = credProvider/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.uday.passwd.credProvider;
+				PRODUCT_BUNDLE_IDENTIFIER = com.whitehax.passwordManager.creds;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -725,7 +725,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7858066925BD086A0097CD5E /* Build configuration list for PBXProject "passwd" */ = {
+		7858066925BD086A0097CD5E /* Build configuration list for PBXProject "WhiteHax PasswordManager" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7858068025BD086B0097CD5E /* Debug */,
@@ -734,7 +734,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7858068225BD086B0097CD5E /* Build configuration list for PBXNativeTarget "passwd" */ = {
+		7858068225BD086B0097CD5E /* Build configuration list for PBXNativeTarget "WhiteHax PasswordManager" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7858068325BD086B0097CD5E /* Debug */,

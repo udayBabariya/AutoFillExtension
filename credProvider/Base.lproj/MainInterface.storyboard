@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZLg-cz-VlU">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -50,25 +51,15 @@
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ysL-vF-4er">
-                                                            <rect key="frame" x="0.0" y="0.0" width="375" height="73"/>
-                                                            <connections>
-                                                                <action selector="cellButtonClicked:" destination="sIB-mJ-Fda" eventType="touchUpInside" id="f06-pL-YKT"/>
-                                                            </connections>
-                                                        </button>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
-                                                        <constraint firstItem="ysL-vF-4er" firstAttribute="leading" secondItem="Ecn-tN-8Ld" secondAttribute="leading" id="7IT-eY-Mne"/>
                                                         <constraint firstItem="BvZ-h7-mNO" firstAttribute="leading" secondItem="Ecn-tN-8Ld" secondAttribute="leading" constant="20" id="7el-gf-eOm"/>
                                                         <constraint firstAttribute="trailing" secondItem="cdt-eG-cg2" secondAttribute="trailing" constant="20" id="7u6-40-r89"/>
-                                                        <constraint firstItem="ysL-vF-4er" firstAttribute="top" secondItem="Ecn-tN-8Ld" secondAttribute="top" id="DQ0-4F-ewZ"/>
                                                         <constraint firstAttribute="height" constant="60" id="Hkz-Zh-2rI"/>
-                                                        <constraint firstAttribute="trailing" secondItem="ysL-vF-4er" secondAttribute="trailing" id="KGY-lr-Any"/>
                                                         <constraint firstAttribute="trailing" secondItem="fyj-rQ-Hu7" secondAttribute="trailing" constant="20" id="OOd-gB-elZ"/>
                                                         <constraint firstItem="BvZ-h7-mNO" firstAttribute="centerY" secondItem="fyj-rQ-Hu7" secondAttribute="centerY" id="RVb-aH-qfW"/>
                                                         <constraint firstItem="cdt-eG-cg2" firstAttribute="top" secondItem="fyj-rQ-Hu7" secondAttribute="bottom" id="SZv-R4-cRe"/>
-                                                        <constraint firstAttribute="bottom" secondItem="ysL-vF-4er" secondAttribute="bottom" id="XjP-j4-frH"/>
                                                         <constraint firstItem="cdt-eG-cg2" firstAttribute="leading" secondItem="Ecn-tN-8Ld" secondAttribute="leading" constant="20" id="Z0Q-2N-1XC"/>
                                                         <constraint firstAttribute="bottom" secondItem="cdt-eG-cg2" secondAttribute="bottom" constant="2" id="lAb-qQ-65d"/>
                                                         <constraint firstItem="fyj-rQ-Hu7" firstAttribute="leading" secondItem="BvZ-h7-mNO" secondAttribute="trailing" constant="20" id="odt-HA-g1g"/>

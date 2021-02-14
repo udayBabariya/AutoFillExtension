@@ -30,8 +30,8 @@ class Helper{
 
 class StringConstant{
     
-    static let defaultUser = ""//"liteuser1"
-    static let defaultPass = ""//"whitehax123"
+    static let defaultUser = "liteuser1"
+    static let defaultPass = "whitehax123"
 }
 
 
