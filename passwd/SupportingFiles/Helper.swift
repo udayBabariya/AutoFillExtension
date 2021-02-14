@@ -34,8 +34,7 @@ class StringConstant{
     static let defaultPass = ""//"whitehax123"
 }
 
-///custom platform + blank url
-///edit password - url + platform editable
+
 
 
 
@@ -50,3 +49,6 @@ class StringConstant{
 ///logout button on top right corner
 ///show password button
 ///after import platform missing
+///custom platform + blank url
+///edit password - url + platform editable
+///add button icon change on home screen
