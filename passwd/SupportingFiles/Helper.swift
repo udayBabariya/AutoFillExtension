@@ -36,7 +36,7 @@ class StringConstant{
 
 ///custom platform + blank url
 ///edit password - url + platform editable
-///after import platform missing
+
 
 
 //DONE
@@ -49,3 +49,4 @@ class StringConstant{
 ///platform icon for extension
 ///logout button on top right corner
 ///show password button
+///after import platform missing

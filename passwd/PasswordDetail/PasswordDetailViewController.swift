@@ -10,6 +10,7 @@ import UIKit
 protocol passwordDetailVCDelegate{
     func deleted()
     func modified()
+    func credAdded()
 }
 
 class PasswordDetailViewController: BaseViewController {
@@ -18,15 +19,18 @@ class PasswordDetailViewController: BaseViewController {
     @IBOutlet weak var navBarTitleLabel: UILabel!
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var serviceTypeLabel: UILabel!
-    @IBOutlet weak var urlLable: UILabel!
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var urlTextField: UITextField!
     @IBOutlet weak var deleteButton: UIButton!
     @IBOutlet weak var updateButton: UIButton!
     @IBOutlet weak var showPasswordButton: UIButton!
+    @IBOutlet weak var saveButton: UIButton!
     
     var selectedPassword = Credential()
     var delegate: passwordDetailVCDelegate?
+    var usedForAddNewPassword = false
+    var selectedPlatform = Platforms.Facebook
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,12 +49,29 @@ class PasswordDetailViewController: BaseViewController {
     }
     
     func setUp(){
+        saveButton.layer.cornerRadius = saveButton.frame.height/2
         updateButton.layer.cornerRadius = updateButton.frame.height/2
         deleteButton.layer.cornerRadius = deleteButton.frame.height/2
         serviceTypeLabel.text = selectedPassword.platform
-        urlLable.text = selectedPassword.domain
+        urlTextField.text = selectedPassword.domain
         userNameTextField.text = selectedPassword.userName
         passwordTextField.text = AES.decryptWithBase64(string: selectedPassword.password)
+        
+        saveButton.isHidden = true
+        updateButton.isHidden = true
+        deleteButton.isHidden = true
+        if usedForAddNewPassword{
+            saveButton.isHidden = false
+        }else{
+            updateButton.isHidden = false
+            deleteButton.isHidden = false
+            
+            if selectedPassword.platform == "custom"{
+                urlTextField.isUserInteractionEnabled = true
+            }else{
+                urlTextField.isUserInteractionEnabled = false
+            }
+        }
     }
     
     @IBAction func backButtonAction(_ sender: UIButton){
@@ -80,6 +101,34 @@ class PasswordDetailViewController: BaseViewController {
        
     }
     
+    @IBAction func selectPlatformButtonAction(_ sender: UIButton) {
+        showAvaliablePlatforms()
+    }
+    
+    @IBAction func saveButtonAction(_ sender: UIButton) {
+        if userNameTextField.text == "" {
+            Helper.showAlert(head: "Oops!", message: "please enter username", vc: self)
+            return
+        }
+          
+        if passwordTextField.text == "" {
+            Helper.showAlert(head: "Oops!", message: "please enter password", vc: self)
+            return
+        }
+        
+        saveButton.isUserInteractionEnabled = false
+        if let username = userNameTextField.text, let pass = passwordTextField.text{
+            
+            let url = urlTextField.text ?? ""
+            let newCred = Credential(id: UUID().uuidString, domain: url, userName: username, password: AES.encryptWithBase64(string: pass),platform: selectedPlatform.rawValue)
+            PlistManager.write(cred: newCred)
+        }else{
+            print("username or password not found")
+        }
+        delegate?.credAdded()
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     @IBAction func updateButtonAction(_ sender: UIButton) {
         
         if userNameTextField.text == "" {
@@ -92,13 +141,38 @@ class PasswordDetailViewController: BaseViewController {
             return
         }
         
-        
+        selectedPassword.platform = serviceTypeLabel.text ?? ""
+        selectedPassword.domain = urlTextField.text ?? ""
         selectedPassword.userName = userNameTextField.text ?? ""
         selectedPassword.password = AES.encryptWithBase64(string: passwordTextField.text ?? "")
         
         PlistManager.edit(cred: selectedPassword)
         delegate?.modified()
         navigationController?.popViewController(animated: true)
+    }
+    
+    ///show list of available platforms
+    func showAvaliablePlatforms(){
+        let actionSheet = UIAlertController(title: "Select Platform", message: "", preferredStyle: .actionSheet)
+        
+        for platform in Platforms.allCases{
+            let action = UIAlertAction(title: platform.rawValue, style: .default) { _ in
+                self.selectedPlatform = platform
+                self.serviceTypeLabel.text = platform.rawValue
+                self.urlTextField.text = platform.url
+                
+                if platform == .custom{
+                    self.urlTextField.isUserInteractionEnabled = true
+                }else{
+                    self.urlTextField.isUserInteractionEnabled = false
+                }
+            }
+            actionSheet.addAction(action)
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel){ action in }
+        actionSheet.addAction(cancelAction)
+        self.present(actionSheet, animated: true)
     }
     
 }

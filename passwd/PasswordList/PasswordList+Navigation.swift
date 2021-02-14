@@ -13,9 +13,10 @@ extension PasswordListViewController{
     
     ///navigate to add password screem
     func navigateToAddNewPassword(){
-        guard let addPasswordVC = UIStoryboard(name: "AddPassword", bundle: nil).instantiateViewController(withIdentifier: "AddPasswordViewController") as? AddPasswordViewController else {return}
-        addPasswordVC.delegate = self
-        self.navigationController?.pushViewController(addPasswordVC, animated: true)
+        guard let passwordDetailVC = UIStoryboard(name: "PasswordDetail", bundle: nil).instantiateViewController(withIdentifier: "PasswordDetailViewController") as? PasswordDetailViewController else {return}
+        passwordDetailVC.delegate = self
+        passwordDetailVC.usedForAddNewPassword = true
+        self.navigationController?.pushViewController(passwordDetailVC, animated: true)
     }
     
     /// navigate to selected credentials details screen
@@ -42,18 +43,17 @@ extension PasswordListViewController: loginVCDelegate{
 }
 
 
-extension PasswordListViewController: addPasswordVCDelegate{
-    func credAdded() {
-        fetchPasswords_ReloadTV()
-    }
-}
-
+//MARK:- Delegate
 extension PasswordListViewController: passwordDetailVCDelegate{
     func deleted() {
         fetchPasswords_ReloadTV()
     }
     
     func modified() {
+        fetchPasswords_ReloadTV()
+    }
+    
+    func credAdded() {
         fetchPasswords_ReloadTV()
     }
     

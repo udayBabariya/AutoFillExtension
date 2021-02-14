@@ -15,6 +15,7 @@ enum Platforms: String, CaseIterable{
     case SnapChat
     case Instagram
     case LinkedIn
+    case custom
     
     var url: String {
         switch self{
@@ -28,6 +29,8 @@ enum Platforms: String, CaseIterable{
             return "www.instagram.com"
         case .LinkedIn:
             return "www.linkedin.com"
+        case .custom:
+            return ""
         }
     }
 }

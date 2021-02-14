@@ -53,22 +53,22 @@ class LoginViewController: BaseViewController {
     
     
     @IBAction func loginButtonAction(_ sender: UIButton){
-//        if userNameTextField.text == ""{
-//            Helper.showAlert(head: "Oops!", message: "Please Enter UserName", vc: self)
-//            return
-//        }
-//        
-//        if passwordTextField.text == ""{
-//            Helper.showAlert(head: "Oops!", message: "Please Enter Password", vc: self)
-//            return
-//        }
-//        
-//        ///check for default password
-//        if userNameTextField.text != StringConstant.defaultUser ||
-//            passwordTextField.text != StringConstant.defaultPass{
-//            Helper.showAlert(head: "Oops!", message: "Username or password invalid!", vc: self)
-//            return
-//        }
+        if userNameTextField.text == ""{
+            Helper.showAlert(head: "Oops!", message: "Please Enter UserName", vc: self)
+            return
+        }
+        
+        if passwordTextField.text == ""{
+            Helper.showAlert(head: "Oops!", message: "Please Enter Password", vc: self)
+            return
+        }
+        
+        ///check for default password
+        if userNameTextField.text != StringConstant.defaultUser ||
+            passwordTextField.text != StringConstant.defaultPass{
+            Helper.showAlert(head: "Oops!", message: "Username or password invalid!", vc: self)
+            return
+        }
 
         
         Helper.setLoginState(login: true)

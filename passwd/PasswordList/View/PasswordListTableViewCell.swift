@@ -36,6 +36,8 @@ class PasswordListTableViewCell: UITableViewCell {
             platformImageView.image = UIImage(named: "instagram")
         case .LinkedIn:
             platformImageView.image = UIImage(named: "linkedin")
+        case .custom:
+            platformImageView.image = UIImage(named: "password")
         }
     }
 
