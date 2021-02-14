@@ -58,7 +58,7 @@ class PasswordDetailViewController: BaseViewController {
     }
     
     @IBAction func showPasswordButtonAction(_ sender: UIButton){
-        
+        passwordTextField.isSecureTextEntry = !passwordTextField.isSecureTextEntry
     }
     
     @IBAction func deleteButtonAction(_ sender: UIButton){

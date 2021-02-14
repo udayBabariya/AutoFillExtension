@@ -77,7 +77,7 @@ class AddPasswordViewController: BaseViewController {
     }
     
     @IBAction func showPasswordButtonAction(_ sender: UIButton){
-        
+        passwordTextFiled.isSecureTextEntry = !passwordTextFiled.isSecureTextEntry
     }    
 
 }

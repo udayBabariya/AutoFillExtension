@@ -105,6 +105,13 @@
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                                                     </textField>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FRO-QT-vYb">
+                                                                        <rect key="frame" x="347" y="31.5" width="32" height="32"/>
+                                                                        <state key="normal" image="eye"/>
+                                                                        <connections>
+                                                                            <action selector="showPasswordButtonActionWith_sender:" destination="983-vA-LGT" eventType="touchUpInside" id="DEm-Ee-qHK"/>
+                                                                        </connections>
+                                                                    </button>
                                                                 </subviews>
                                                                 <color key="backgroundColor" red="0.1019607931" green="0.1294117719" blue="0.1764705926" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 <constraints>
@@ -112,9 +119,11 @@
                                                                     <constraint firstAttribute="bottom" secondItem="Fvb-fz-n2g" secondAttribute="bottom" constant="5" id="HUC-mP-Ljn"/>
                                                                     <constraint firstItem="Fvb-fz-n2g" firstAttribute="top" secondItem="lnQ-dz-fIr" secondAttribute="bottom" constant="2" id="Hjd-t8-hmx"/>
                                                                     <constraint firstItem="lnQ-dz-fIr" firstAttribute="leading" secondItem="jJt-7V-pzh" secondAttribute="leading" constant="20" id="MRw-l3-Wmu"/>
+                                                                    <constraint firstItem="FRO-QT-vYb" firstAttribute="centerY" secondItem="Fvb-fz-n2g" secondAttribute="centerY" id="WhD-M4-Dzn"/>
                                                                     <constraint firstItem="Fvb-fz-n2g" firstAttribute="top" secondItem="jJt-7V-pzh" secondAttribute="top" constant="25" id="hcm-PA-qmi"/>
                                                                     <constraint firstItem="lnQ-dz-fIr" firstAttribute="top" secondItem="jJt-7V-pzh" secondAttribute="top" id="jMV-wf-etS"/>
                                                                     <constraint firstItem="Fvb-fz-n2g" firstAttribute="leading" secondItem="jJt-7V-pzh" secondAttribute="leading" constant="20" id="k6N-Ah-AAY"/>
+                                                                    <constraint firstItem="FRO-QT-vYb" firstAttribute="trailing" secondItem="Fvb-fz-n2g" secondAttribute="trailing" constant="-15" id="u5R-0s-p21"/>
                                                                     <constraint firstAttribute="trailing" secondItem="lnQ-dz-fIr" secondAttribute="trailing" constant="20" id="zUs-dF-B39"/>
                                                                 </constraints>
                                                             </view>
@@ -248,6 +257,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="eye" width="32" height="32"/>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

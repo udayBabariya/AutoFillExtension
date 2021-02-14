@@ -83,6 +83,10 @@ class LoginViewController: BaseViewController {
     @IBAction func forgetPasswordButtonAction(_ sender: UIButton){
         
     }
+    
+    @IBAction func showPasswordButtonAction( _sender: UIButton) {
+        passwordTextField.isSecureTextEntry = !passwordTextField.isSecureTextEntry
+    }
 
 }
 
