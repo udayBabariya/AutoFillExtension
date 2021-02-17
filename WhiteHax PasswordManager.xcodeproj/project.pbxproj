@@ -37,12 +37,7 @@
 		783A3CF125D8099700873F37 /* PasswordListAddNewPasswordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783A3CBA25D6EE0300873F37 /* PasswordListAddNewPasswordTableViewCell.swift */; };
 		783A3CF225D8099700873F37 /* PasswordListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783A3CB425D6EDE300873F37 /* PasswordListTableViewCell.swift */; };
 		783A3CF525D8099B00873F37 /* PasswordList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7802EDFF25D607B0001CF80D /* PasswordList.storyboard */; };
-		783A3CF625D8099B00873F37 /* PasswordList+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783A3CC225D6F08200873F37 /* PasswordList+Navigation.swift */; };
-		783A3CF725D8099B00873F37 /* PasswordListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7802EDFA25D60792001CF80D /* PasswordListViewController.swift */; };
-		783A3CF825D8099B00873F37 /* PasswordList+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783A3CBE25D6F05A00873F37 /* PasswordList+TableView.swift */; };
-		783A3CF925D8099B00873F37 /* PasswordList+ImprtExport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783A3CC625D6F42C00873F37 /* PasswordList+ImprtExport.swift */; };
 		783A3CFC25D8099E00873F37 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7802EDF525D600B6001CF80D /* Login.storyboard */; };
-		783A3CFD25D8099E00873F37 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7802EDF125D60098001CF80D /* LoginViewController.swift */; };
 		783A3D0025D80A4400873F37 /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783A3CAD25D6E07700873F37 /* UITextField.swift */; };
 		783A3D0225D80A4400873F37 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783A3CA925D6DE0500873F37 /* UIColor.swift */; };
 		7858067225BD086A0097CD5E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7858067125BD086A0097CD5E /* AppDelegate.swift */; };
@@ -382,8 +377,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7889F35325C47D59009C4C25 /* credProvider */,
 				7858066D25BD086A0097CD5E /* WhiteHax PasswordManager */,
+				7889F35325C47D59009C4C25 /* credProvider */,
 			);
 		};
 /* End PBXProject section */
@@ -454,26 +449,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				783A3CF725D8099B00873F37 /* PasswordListViewController.swift in Sources */,
 				7889F36A25C482AE009C4C25 /* AddCredsViewController.swift in Sources */,
 				78B1379B25D82BA100DFB721 /* CredentialProviderViewController.swift in Sources */,
 				783A3D0025D80A4400873F37 /* UITextField.swift in Sources */,
 				78B137E425D8AF4C00DFB721 /* PasswordListTableViewCellForExtension.swift in Sources */,
 				78B137F325D8C9CE00DFB721 /* PasswordDetail+Platform.swift in Sources */,
-				783A3CF925D8099B00873F37 /* PasswordList+ImprtExport.swift in Sources */,
 				783A3CEA25D8097A00873F37 /* AddPasswordViewController.swift in Sources */,
-				783A3CF625D8099B00873F37 /* PasswordList+Navigation.swift in Sources */,
 				783A3CF125D8099700873F37 /* PasswordListAddNewPasswordTableViewCell.swift in Sources */,
 				788BDCCF25D0442E00117A19 /* CredProvider+ImportExport.swift in Sources */,
 				7890576B25CC5C8700B2DEFD /* AES.swift in Sources */,
-				783A3CFD25D8099E00873F37 /* LoginViewController.swift in Sources */,
 				783A3D0225D80A4400873F37 /* UIColor.swift in Sources */,
 				788BDCBD25CFFB8900117A19 /* CSVManager.swift in Sources */,
 				7889F36625C47DF0009C4C25 /* Credential.swift in Sources */,
 				783A3CE225D8097200873F37 /* BaseViewController.swift in Sources */,
 				783A3CEE25D8098C00873F37 /* PlatformOptions.swift in Sources */,
 				783A3CE525D8097600873F37 /* PasswordDetailViewController.swift in Sources */,
-				783A3CF825D8099B00873F37 /* PasswordList+TableView.swift in Sources */,
 				788BDCD325D0444500117A19 /* CredProvider+TV.swift in Sources */,
 				783A3CEB25D8097A00873F37 /* AddPassword+Platform.swift in Sources */,
 				7889F35825C47D59009C4C25 /* CredentialProviderViewController2.swift in Sources */,

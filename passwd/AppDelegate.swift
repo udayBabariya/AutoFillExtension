@@ -3,7 +3,7 @@
 //  passwd
 //
 //  Created by Uday on 24/01/21.
-//
+//open app using - whiteHaxPassworManager://uday
 
 import UIKit
 
