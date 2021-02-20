@@ -52,10 +52,14 @@ class PasswordDetailViewController: BaseViewController {
         saveButton.layer.cornerRadius = saveButton.frame.height/2
         updateButton.layer.cornerRadius = updateButton.frame.height/2
         deleteButton.layer.cornerRadius = deleteButton.frame.height/2
-        serviceTypeLabel.text = selectedPassword.platform
-        urlTextField.text = selectedPassword.domain
-        userNameTextField.text = selectedPassword.userName
-        passwordTextField.text = AES.decryptWithBase64(string: selectedPassword.password)
+        
+        if !usedForAddNewPassword{
+            serviceTypeLabel.text = selectedPassword.platform
+            urlTextField.text = selectedPassword.domain
+            userNameTextField.text = selectedPassword.userName
+            passwordTextField.text = AES.decryptWithBase64(string: selectedPassword.password)
+        }
+       
         
         saveButton.isHidden = true
         updateButton.isHidden = true

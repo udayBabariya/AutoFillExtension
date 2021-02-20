@@ -13,22 +13,24 @@ class Helper{
     static let userName         = "userName"
     
     class func isLogedIn() -> Bool {
-        return UserDefaults.standard.bool(forKey: keyIsLoggedIn)
+        return UserDefaults.standard.bool(forKey: Helper.keyIsLoggedIn)
     }
     
     class func setLoginState(login: Bool){
-        UserDefaults.standard.setValue(login, forKey: keyIsLoggedIn)
+        UserDefaults.standard.setValue(login, forKey: Helper.keyIsLoggedIn)
+        UserDefaults.standard.synchronize()
     }
     
     class func getLoggedInUserName() -> String{
-        if let userName = UserDefaults.standard.string(forKey: userName){
+        if let userName = UserDefaults.standard.string(forKey: Helper.userName){
             return userName
         }
         return  ""
     }
     
     class func setLoggedInUserName(userName: String){
-        UserDefaults.standard.setValue(userName, forKey: userName)
+        UserDefaults.standard.setValue(userName, forKey: Helper.userName)
+        UserDefaults.standard.synchronize()
     }
     
     

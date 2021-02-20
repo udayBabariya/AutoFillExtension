@@ -15,6 +15,7 @@ extension PasswordListViewController{
     func navigateToAddNewPassword(){
         guard let passwordDetailVC = UIStoryboard(name: "PasswordDetail", bundle: nil).instantiateViewController(withIdentifier: "PasswordDetailViewController") as? PasswordDetailViewController else {return}
         passwordDetailVC.delegate = self
+        passwordDetailVC.selectedPassword = Credential(id: "", domain: "", userName: "", password: "", platform: "")
         passwordDetailVC.usedForAddNewPassword = true
         self.navigationController?.pushViewController(passwordDetailVC, animated: true)
     }
