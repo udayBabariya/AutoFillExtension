@@ -101,12 +101,21 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="App" translatesAutoresizingMaskIntoConstraints="NO" id="R5h-Zz-Rzl">
+                                <rect key="frame" x="75.5" y="6.5" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="CfB-cG-w8v"/>
+                                    <constraint firstAttribute="height" constant="40" id="x0u-d7-FFe"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="od4-wJ-HCM"/>
                         <color key="backgroundColor" red="0.098039209840000002" green="0.1294117719" blue="0.1764705926" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="od4-wJ-HCM" firstAttribute="trailing" secondItem="vV8-PS-V8O" secondAttribute="trailing" id="074-BA-TfX"/>
+                            <constraint firstItem="0Ha-0D-baB" firstAttribute="leading" secondItem="R5h-Zz-Rzl" secondAttribute="trailing" constant="10" id="Ddz-i2-g0E"/>
                             <constraint firstItem="0Ha-0D-baB" firstAttribute="top" secondItem="od4-wJ-HCM" secondAttribute="top" constant="10" id="LkO-Bs-tSV"/>
+                            <constraint firstItem="R5h-Zz-Rzl" firstAttribute="centerY" secondItem="0Ha-0D-baB" secondAttribute="centerY" id="XgA-7Y-30f"/>
                             <constraint firstItem="0Ha-0D-baB" firstAttribute="centerX" secondItem="Dsc-CR-HVB" secondAttribute="centerX" id="civ-B1-oR3"/>
                             <constraint firstItem="od4-wJ-HCM" firstAttribute="bottom" secondItem="vV8-PS-V8O" secondAttribute="bottom" id="nk2-7c-C0C"/>
                             <constraint firstItem="vV8-PS-V8O" firstAttribute="leading" secondItem="od4-wJ-HCM" secondAttribute="leading" id="ntA-Zl-zNj"/>
@@ -119,7 +128,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xoo-Cu-p1i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-566" y="59"/>
+            <point key="canvasLocation" x="-567.20000000000005" y="58.920539730134934"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Uma-9u-xWV">
@@ -246,6 +255,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="App" width="60" height="60"/>
         <image name="password" width="32" height="32"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -15,10 +15,12 @@ struct AES {
     private let key: Data
     private let iv: Data
     
-    static let password = "UserPassword1!"
-    static let key128   = "1234567890123456"                   // 16 bytes for AES128
-    static let key256   = "12345678901234561234567890123456"   // 32 bytes for AES256
-    static let iv       = "abcdefghijklmnop"                   // 16 bytes for AES128
+//    static let password = "UserPassword1!"
+//    static let key128   = "codingaffairscom"                   // 16 bytes for AES128
+    static let key256   = "12345678901234561234567890123499"   // 32 bytes for AES256
+    static let iv       = "abcdefghijklmnop"
+    
+//    private static final byte[] keyValue =  new byte[]{-83, 83, -29, 58, 16, 104, 117, 122, 45, -114, 36, -68, -79, -78, 59, -118, -30, -98, -106, 82, -108, -34, 117, 27, 111, -82, 86, 90, 27, 22, 46, 35};
 
    
 
@@ -81,25 +83,43 @@ struct AES {
         return cryptData
     }
     
-    
     static func encryptWithBase64(string: String) -> String{
-        let aes128 = AES(key: AES.key128, iv: AES.iv)
-        if let encryptedPassword128 = aes128?.encrypt(string: string){
-            let base64Data = encryptedPassword128.base64EncodedData(options: NSData.Base64EncodingOptions.endLineWithLineFeed)
+        let aes256 = AES(key: AES.key256, iv: AES.iv)
+        if let encryptedPassword256 = aes256?.encrypt(string: string){
+            let base64Data = encryptedPassword256.base64EncodedData(options: NSData.Base64EncodingOptions.endLineWithLineFeed)
             return String(data: base64Data, encoding: String.Encoding(rawValue: String.Encoding.utf8.rawValue)) ?? ""
         }
         return ""
     }
     
+//    static func encryptWithBase64128(string: String) -> String{
+//        let aes128 = AES(key: AES.key128, iv: AES.iv)
+//        if let encryptedPassword128 = aes128?.encrypt(string: string){
+//            let base64Data = encryptedPassword128.base64EncodedData(options: NSData.Base64EncodingOptions.endLineWithLineFeed)
+//            return String(data: base64Data, encoding: String.Encoding(rawValue: String.Encoding.utf8.rawValue)) ?? ""
+//        }
+//        return ""
+//    }
+    
     static func decryptWithBase64(string: String)->String{
-        let aes128 = AES(key: AES.key128, iv: AES.iv)
+        let aes256 = AES(key: AES.key256, iv: AES.iv)
         let myData = string.data(using: String.Encoding(rawValue: String.Encoding.utf8.rawValue))!
         let base64DecodedData = Data(base64Encoded: myData)
-        if let decryptedString = aes128?.decrypt(data: base64DecodedData){
+        if let decryptedString = aes256?.decrypt(data: base64DecodedData){
           return decryptedString
         }
         return ""
     }
+    
+//    static func decryptWithBase64128(string: String)->String{
+//        let aes128 = AES(key: AES.key128, iv: AES.iv)
+//        let myData = string.data(using: String.Encoding(rawValue: String.Encoding.utf8.rawValue))!
+//        let base64DecodedData = Data(base64Encoded: myData)
+//        if let decryptedString = aes128?.decrypt(data: base64DecodedData){
+//          return decryptedString
+//        }
+//        return ""
+//    }
 }
 /*
  let aes128 = AES(key: key128, iv: iv)

@@ -47,6 +47,8 @@
 		7858067B25BD086B0097CD5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7858067A25BD086B0097CD5E /* Assets.xcassets */; };
 		7858067E25BD086B0097CD5E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7858067C25BD086B0097CD5E /* LaunchScreen.storyboard */; };
 		785806A225BD09940097CD5E /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7858068E25BD09150097CD5E /* AuthenticationServices.framework */; };
+		7876312C25E1549E0005A041 /* MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7876312B25E1549E0005A041 /* MD5.swift */; };
+		7876312D25E1549E0005A041 /* MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7876312B25E1549E0005A041 /* MD5.swift */; };
 		7889F34325C4685C009C4C25 /* Credential.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7889F34225C4685C009C4C25 /* Credential.swift */; };
 		7889F35525C47D59009C4C25 /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7858068E25BD09150097CD5E /* AuthenticationServices.framework */; };
 		7889F35825C47D59009C4C25 /* CredentialProviderViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7889F35725C47D59009C4C25 /* CredentialProviderViewController2.swift */; };
@@ -123,6 +125,7 @@
 		7858067F25BD086B0097CD5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7858068E25BD09150097CD5E /* AuthenticationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AuthenticationServices.framework; path = System/Library/Frameworks/AuthenticationServices.framework; sourceTree = SDKROOT; };
 		785806A125BD09940097CD5E /* passwd.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = passwd.entitlements; sourceTree = "<group>"; };
+		7876312B25E1549E0005A041 /* MD5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MD5.swift; sourceTree = "<group>"; };
 		7889F34225C4685C009C4C25 /* Credential.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credential.swift; sourceTree = "<group>"; };
 		7889F35425C47D59009C4C25 /* credProvider.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = credProvider.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		7889F35725C47D59009C4C25 /* CredentialProviderViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialProviderViewController2.swift; sourceTree = "<group>"; };
@@ -217,6 +220,9 @@
 			children = (
 				783A3CCC25D6F5C000873F37 /* Helper.swift */,
 				783A3CDD25D777FE00873F37 /* BaseViewController.swift */,
+				78FC5B3A25CD887F002F30BC /* CSVManager.swift */,
+				7890576725CC5B0600B2DEFD /* AES.swift */,
+				7876312B25E1549E0005A041 /* MD5.swift */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -267,8 +273,6 @@
 				7858067A25BD086B0097CD5E /* Assets.xcassets */,
 				7858067C25BD086B0097CD5E /* LaunchScreen.storyboard */,
 				7858067F25BD086B0097CD5E /* Info.plist */,
-				7890576725CC5B0600B2DEFD /* AES.swift */,
-				78FC5B3A25CD887F002F30BC /* CSVManager.swift */,
 				78FC5B3E25CD89AB002F30BC /* test.txt */,
 			);
 			path = passwd;
@@ -421,6 +425,7 @@
 			files = (
 				7802EDFB25D60792001CF80D /* PasswordListViewController.swift in Sources */,
 				783A3CD325D758C000873F37 /* AddPassword+Platform.swift in Sources */,
+				7876312C25E1549E0005A041 /* MD5.swift in Sources */,
 				78B137EE25D8C78D00DFB721 /* PasswordDetail+Platform.swift in Sources */,
 				783A3CAA25D6DE0500873F37 /* UIColor.swift in Sources */,
 				783A3CB525D6EDE300873F37 /* PasswordListTableViewCell.swift in Sources */,
@@ -463,6 +468,7 @@
 				7889F36625C47DF0009C4C25 /* Credential.swift in Sources */,
 				783A3CE225D8097200873F37 /* BaseViewController.swift in Sources */,
 				783A3CEE25D8098C00873F37 /* PlatformOptions.swift in Sources */,
+				7876312D25E1549E0005A041 /* MD5.swift in Sources */,
 				783A3CE525D8097600873F37 /* PasswordDetailViewController.swift in Sources */,
 				788BDCD325D0444500117A19 /* CredProvider+TV.swift in Sources */,
 				783A3CEB25D8097A00873F37 /* AddPassword+Platform.swift in Sources */,
