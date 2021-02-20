@@ -9,7 +9,8 @@ import UIKit
 
 class Helper{
     
-    static let keyIsLoggedIn = "isLogin"
+    static let keyIsLoggedIn    = "isLogin"
+    static let userName         = "userName"
     
     class func isLogedIn() -> Bool {
         return UserDefaults.standard.bool(forKey: keyIsLoggedIn)
@@ -17,6 +18,17 @@ class Helper{
     
     class func setLoginState(login: Bool){
         UserDefaults.standard.setValue(login, forKey: keyIsLoggedIn)
+    }
+    
+    class func getLoggedInUserName() -> String{
+        if let userName = UserDefaults.standard.string(forKey: userName){
+            return userName
+        }
+        return  ""
+    }
+    
+    class func setLoggedInUserName(userName: String){
+        UserDefaults.standard.setValue(userName, forKey: userName)
     }
     
     

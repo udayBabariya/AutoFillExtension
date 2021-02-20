@@ -9,7 +9,7 @@ import Foundation
 import CommonCrypto
 
 struct AES {
-
+    
     // MARK: - Value
     // MARK: Private
     private let key: Data

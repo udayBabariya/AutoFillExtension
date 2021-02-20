@@ -70,13 +70,19 @@ class LoginViewController: BaseViewController {
             return
         }
 
-        
+        Helper.setLoggedInUserName(userName: userNameTextField.text ?? "")
         Helper.setLoginState(login: true)
         delegate?.login()
         self.dismiss(animated: true)
     }
     
     @IBAction func registerButtonAction(_ sender: UIButton){
+//        let urlString = "prefs:root=WIFI"
+//        if UIApplication.shared.canOpenURL(URL(string: urlString)!){
+//            UIApplication.shared.open(URL(string: urlString)!, options: [:], completionHandler: nil)
+//        }else{
+//            Swift.print("not able to open")
+//        }
         
     }
     

@@ -53,6 +53,7 @@ class PasswordListViewController: BaseViewController {
         let alert = UIAlertController(title: "Logout", message: "Are You Sure?", preferredStyle: .alert)
         
         let yesAction = UIAlertAction(title: "Yes", style: .destructive) { (_) in
+            Helper.setLoggedInUserName(userName: "")
             Helper.setLoginState(login: false)
             self.checkForLoginSetData()
         }
