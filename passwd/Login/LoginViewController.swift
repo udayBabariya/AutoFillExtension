@@ -74,6 +74,7 @@ class LoginViewController: BaseViewController {
         Helper.setLoginState(login: true)
         delegate?.login()
         self.dismiss(animated: true)
+        
     }
     
     @IBAction func registerButtonAction(_ sender: UIButton){

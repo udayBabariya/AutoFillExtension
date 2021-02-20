@@ -11,6 +11,7 @@ class Helper{
     
     static let keyIsLoggedIn    = "isLogin"
     static let userName         = "userName"
+    static let appGroup         = "group.pwUdayDemo"
     
     class func isLogedIn() -> Bool {
         return UserDefaults.standard.bool(forKey: Helper.keyIsLoggedIn)
@@ -22,6 +23,12 @@ class Helper{
     }
     
     class func getLoggedInUserName() -> String{
+        
+        let userDefaults = UserDefaults(suiteName: Helper.appGroup)
+        if let userName = userDefaults?.object(forKey: Helper.userName) as? String {
+          return userName
+        }
+        
         if let userName = UserDefaults.standard.string(forKey: Helper.userName){
             return userName
         }
@@ -31,6 +38,10 @@ class Helper{
     class func setLoggedInUserName(userName: String){
         UserDefaults.standard.setValue(userName, forKey: Helper.userName)
         UserDefaults.standard.synchronize()
+        
+        let userDefaults = UserDefaults(suiteName: Helper.appGroup)!
+        userDefaults.set(userName, forKey: Helper.userName)
+        userDefaults.synchronize()
     }
     
     

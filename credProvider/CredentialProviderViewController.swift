@@ -26,6 +26,16 @@ class CredentialProviderViewController: ASCredentialProviderViewController {
         super.viewDidLoad()
 
     }
+    
+    @IBAction func closeButtonAction(){
+        self.extensionContext.cancelRequest(withError: NSError(domain: ASExtensionErrorDomain, code:ASExtensionError.userInteractionRequired.rawValue))
+    }
+    
+//    override func provideCredentialWithoutUserInteraction(for credentialIdentity: ASPasswordCredentialIdentity) {
+//        let credToProvide = ASPasswordCredential(user: "udayyy", password: "paasssss")
+//
+//        self.extensionContext.completeRequest(withSelectedCredential: credToProvide, completionHandler: nil)
+//    }
 
 }
 
