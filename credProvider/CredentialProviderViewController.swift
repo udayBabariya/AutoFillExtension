@@ -31,11 +31,11 @@ class CredentialProviderViewController: ASCredentialProviderViewController {
         self.extensionContext.cancelRequest(withError: NSError(domain: ASExtensionErrorDomain, code:ASExtensionError.userInteractionRequired.rawValue))
     }
     
-//    override func provideCredentialWithoutUserInteraction(for credentialIdentity: ASPasswordCredentialIdentity) {
-//        let credToProvide = ASPasswordCredential(user: "udayyy", password: "paasssss")
-//
-//        self.extensionContext.completeRequest(withSelectedCredential: credToProvide, completionHandler: nil)
-//    }
+    override func provideCredentialWithoutUserInteraction(for credentialIdentity: ASPasswordCredentialIdentity) {
+        print(credentialIdentity.serviceIdentifier.identifier)
+        let credToProvide = ASPasswordCredential(user: "udayyy", password: "paasssss")
+        self.extensionContext.completeRequest(withSelectedCredential: credToProvide, completionHandler: nil)
+    }
 
 }
 

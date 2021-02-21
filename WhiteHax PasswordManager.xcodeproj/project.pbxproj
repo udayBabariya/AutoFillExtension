@@ -640,6 +640,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = passwd/passwd.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = GU6TNC55T8;
 				INFOPLIST_FILE = passwd/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -662,6 +663,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = passwd/passwd.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = GU6TNC55T8;
 				INFOPLIST_FILE = passwd/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -681,6 +683,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = credProvider/credProvider.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = GU6TNC55T8;
 				INFOPLIST_FILE = credProvider/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -702,6 +705,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = credProvider/credProvider.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = GU6TNC55T8;
 				INFOPLIST_FILE = credProvider/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
