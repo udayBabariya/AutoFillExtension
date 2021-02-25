@@ -94,16 +94,16 @@ class CSVManager{
                     cred.id = field
                 }
                 if fieldName.lowercased().contains("username"){
-                    cred.userName = field
+                    cred.userName = AES.decryptWithBase64(string: field)
                 }
                 if fieldName.lowercased().contains("password"){
-                    cred.password = field
+                    cred.password = AES.decryptWithBase64(string: field)
                 }
                 if fieldName.lowercased().contains("domain"){
-                    cred.domain = field
+                    cred.domain = AES.decryptWithBase64(string: field)
                 }
                 if fieldName.lowercased().contains("platform"){
-                    cred.platform = field
+                    cred.platform = AES.decryptWithBase64(string: field)
                 }
                 if index == 4 {
                     creds.append(cred)
@@ -121,7 +121,13 @@ class CSVManager{
             var csvText = "id,userName,password,domain,platform\n"
 
             for cred in creds {
-                let newLine = "\(cred.id),\(cred.userName),\(cred.password),\(cred.domain),\(cred.platform)\n"
+                let credId              = cred.id
+                let credUserName        = AES.encryptWithBase64(string:cred.userName)
+                let credUserPassword    = AES.encryptWithBase64(string:cred.password)
+                let credUserDomain      = AES.encryptWithBase64(string:cred.domain)
+                let credUserPlatform    = AES.encryptWithBase64(string:cred.platform)
+                
+                let newLine = "\(credId),\(credUserName),\(credUserPassword),\(credUserDomain),\(credUserPlatform)\n"
                 csvText.append(newLine)
             }
             do {

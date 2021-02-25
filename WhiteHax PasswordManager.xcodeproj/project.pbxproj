@@ -13,6 +13,8 @@
 		7802EE0025D607B0001CF80D /* PasswordList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7802EDFF25D607B0001CF80D /* PasswordList.storyboard */; };
 		7802EE0525D60BEC001CF80D /* AddPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7802EE0425D60BEC001CF80D /* AddPasswordViewController.swift */; };
 		7802EE0925D60C02001CF80D /* AddPassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7802EE0825D60C02001CF80D /* AddPassword.storyboard */; };
+		781B32A925E4136700E441C8 /* HowItWorks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781B32A825E4136700E441C8 /* HowItWorks.swift */; };
+		781B32AA25E4136700E441C8 /* HowItWorks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781B32A825E4136700E441C8 /* HowItWorks.swift */; };
 		783A3C9E25D6D3FC00873F37 /* PasswordDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783A3C9D25D6D3FC00873F37 /* PasswordDetailViewController.swift */; };
 		783A3CA425D6D40700873F37 /* PasswordDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 783A3CA325D6D40700873F37 /* PasswordDetail.storyboard */; };
 		783A3CAA25D6DE0500873F37 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783A3CA925D6DE0500873F37 /* UIColor.swift */; };
@@ -102,6 +104,7 @@
 		7802EDFF25D607B0001CF80D /* PasswordList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PasswordList.storyboard; sourceTree = "<group>"; };
 		7802EE0425D60BEC001CF80D /* AddPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPasswordViewController.swift; sourceTree = "<group>"; };
 		7802EE0825D60C02001CF80D /* AddPassword.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddPassword.storyboard; sourceTree = "<group>"; };
+		781B32A825E4136700E441C8 /* HowItWorks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowItWorks.swift; sourceTree = "<group>"; };
 		783A3C9D25D6D3FC00873F37 /* PasswordDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordDetailViewController.swift; sourceTree = "<group>"; };
 		783A3CA325D6D40700873F37 /* PasswordDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PasswordDetail.storyboard; sourceTree = "<group>"; };
 		783A3CA925D6DE0500873F37 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
@@ -223,6 +226,7 @@
 				78FC5B3A25CD887F002F30BC /* CSVManager.swift */,
 				7890576725CC5B0600B2DEFD /* AES.swift */,
 				7876312B25E1549E0005A041 /* MD5.swift */,
+				781B32A825E4136700E441C8 /* HowItWorks.swift */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -426,6 +430,7 @@
 				7802EDFB25D60792001CF80D /* PasswordListViewController.swift in Sources */,
 				783A3CD325D758C000873F37 /* AddPassword+Platform.swift in Sources */,
 				7876312C25E1549E0005A041 /* MD5.swift in Sources */,
+				781B32A925E4136700E441C8 /* HowItWorks.swift in Sources */,
 				78B137EE25D8C78D00DFB721 /* PasswordDetail+Platform.swift in Sources */,
 				783A3CAA25D6DE0500873F37 /* UIColor.swift in Sources */,
 				783A3CB525D6EDE300873F37 /* PasswordListTableViewCell.swift in Sources */,
@@ -460,6 +465,7 @@
 				78B137E425D8AF4C00DFB721 /* PasswordListTableViewCellForExtension.swift in Sources */,
 				78B137F325D8C9CE00DFB721 /* PasswordDetail+Platform.swift in Sources */,
 				783A3CEA25D8097A00873F37 /* AddPasswordViewController.swift in Sources */,
+				781B32AA25E4136700E441C8 /* HowItWorks.swift in Sources */,
 				783A3CF125D8099700873F37 /* PasswordListAddNewPasswordTableViewCell.swift in Sources */,
 				788BDCCF25D0442E00117A19 /* CredProvider+ImportExport.swift in Sources */,
 				7890576B25CC5C8700B2DEFD /* AES.swift in Sources */,
