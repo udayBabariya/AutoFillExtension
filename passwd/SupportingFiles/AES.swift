@@ -51,16 +51,16 @@ class AES {
 
     // MARK: - Function
     // MARK: Public
-    func encrypt(string: String) -> Data? {
+    public func encrypt(string: String) -> Data? {
         return crypt(data: string.data(using: .utf8), option: CCOperation(kCCEncrypt))
     }
 
-    func decrypt(data: Data?) -> String? {
+    public func decrypt(data: Data?) -> String? {
         guard let decryptedData = crypt(data: data, option: CCOperation(kCCDecrypt)) else { return nil }
         return String(bytes: decryptedData, encoding: .utf8)
     }
 
-    func crypt(data: Data?, option: CCOperation) -> Data? {
+    public func crypt(data: Data?, option: CCOperation) -> Data? {
         guard let data = data else { return nil }
 
         let cryptLength = data.count + kCCBlockSizeAES128
@@ -90,7 +90,7 @@ class AES {
         return cryptData
     }
     
-    static func encryptWithBase64(string: String) -> String{
+    public static func encryptWithBase64(string: String) -> String{
         let aes256 = AES(key: AES.key256, iv: AES.iv)
         if let encryptedPassword256 = aes256?.encrypt(string: string){
             let base64Data = encryptedPassword256.base64EncodedData(options: NSData.Base64EncodingOptions.endLineWithLineFeed)
@@ -108,7 +108,7 @@ class AES {
 //        return ""
 //    }
     
-    static func decryptWithBase64(string: String)->String{
+    public static func decryptWithBase64(string: String)->String{
         let aes256 = AES(key: AES.key256, iv: AES.iv)
         let myData = string.data(using: String.Encoding(rawValue: String.Encoding.utf8.rawValue))!
         let base64DecodedData = Data(base64Encoded: myData)
